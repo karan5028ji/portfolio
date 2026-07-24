@@ -1,0 +1,74 @@
+.skills { position: relative; background: var(--bg-secondary); }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+.skill-card {
+  padding: 40px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  will-change: transform;
+  cursor: default;
+}
+.skill-card:hover {
+  box-shadow: 0 8px 40px rgba(0, 194, 255, 0.1), 0 0 0 1px var(--glass-border-hover);
+}
+.skill-card-glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--accent-glow-blue), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.skill-card:hover .skill-card-glow { opacity: 1; }
+.skill-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+.skill-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+.skill-desc { font-size: 0.8rem; color: var(--text-muted); }
+.skills-marquee-wrapper { text-align: center; }
+.marquee-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-purple);
+  margin-bottom: 24px;
+}
+.marquee-container {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+  width: max-content;
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+.marquee-item:hover { color: var(--text-primary); }
+.marquee-dot { font-size: 0.4rem; color: var(--accent-purple); opacity: 0.5; }
+@media (max-width: 968px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-card { padding: 28px 20px; }
+}

@@ -1,0 +1,164 @@
+.about { position: relative; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: start;
+}
+.about-bio { padding-top: 8px; }
+.about-lead {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+.about-lead strong { color: var(--accent-blue); }
+.about-bio p { margin-bottom: 16px; font-size: 0.95rem; }
+.about-bio p strong { color: var(--text-primary); }
+.about-education-box {
+  margin: 24px 0 16px;
+  padding: 16px 20px;
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+}
+.education-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 6px;
+}
+.education-school {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.education-detail {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.about-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--glass-border);
+}
+.stat-item { display: flex; flex-direction: column; gap: 4px; }
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.music-persona-card {
+  position: relative;
+  padding: 40px;
+  border-radius: var(--border-radius-lg);
+  background: rgba(12, 12, 22, 0.94);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(147, 51, 234, 0.15);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  overflow: hidden;
+  z-index: 10;
+  transform: translateY(-8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.music-persona-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(0, 194, 255, 0.6);
+  box-shadow: 
+    0 24px 70px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 194, 255, 0.25);
+}
+
+.persona-dissolve-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 194, 255, 0.25), rgba(168, 85, 247, 0.3));
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+  animation: dissolvePass 1s ease-out 0.8s forwards;
+}
+
+@keyframes dissolvePass {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    visibility: hidden;
+  }
+}
+.persona-content { position: relative; z-index: 1; }
+.persona-avatar-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--accent-gradient);
+  margin-bottom: 20px;
+  box-shadow: 0 0 25px rgba(0, 194, 255, 0.35);
+}
+.persona-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.persona-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-purple);
+  padding: 4px 12px;
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.persona-name { font-size: 1.6rem; margin-bottom: 16px; }
+.persona-desc { font-size: 0.9rem; line-height: 1.7; margin-bottom: 24px; }
+.persona-desc strong { color: var(--accent-blue); }
+.persona-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent-gradient);
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+.persona-role { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.persona-role .role-icon { font-size: 1.5rem; }
+.persona-role strong { display: block; color: var(--text-primary); font-size: 1rem; }
+.persona-role span { font-size: 0.85rem; color: var(--text-secondary); }
+.persona-label-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+@media (max-width: 968px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 480px) {
+  .about-stats { gap: 24px; }
+  .music-persona-card { padding: 28px; }
+}

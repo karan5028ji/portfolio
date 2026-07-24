@@ -1,0 +1,18 @@
+.bg-3d-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #020208;
+  transition: filter 0.2s ease-out, opacity 0.3s ease-out;
+  overflow: hidden;
+}
+
+.bg-3d-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
