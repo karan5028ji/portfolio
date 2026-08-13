@@ -14,17 +14,10 @@ const fadeInUp = {
 
 const socialPlatforms = [
   {
-    name: 'GitHub',
-    desc: 'Software Engineering & Dev Projects',
-    icon: '💻',
-    url: 'https://github.com/karan5028ji',
-    color: '#00c2ff',
-  },
-  {
-    name: 'Spotify / SoundCloud',
-    desc: 'Music Releases (Alias: Kxrn)',
+    name: 'Spotify',
+    desc: 'Official Artist Profile (Alias: Kxrn)',
     icon: '🎧',
-    url: '#',
+    url: 'https://open.spotify.com/artist/57sDiEfeHnlZX2g7gvPBR2',
     color: '#1db954',
   },
   {
@@ -35,11 +28,25 @@ const socialPlatforms = [
     color: '#e1306c',
   },
   {
-    name: 'LinkedIn',
-    desc: 'Professional Networking',
-    icon: '👔',
-    url: '#',
-    color: '#0077b5',
+    name: 'GitHub',
+    desc: 'Software Engineering & Dev Projects',
+    icon: '💻',
+    url: 'https://github.com/karan5028ji',
+    color: '#00c2ff',
+  },
+  {
+    name: 'MusicBrainz',
+    desc: 'Official Music Producer Entry',
+    icon: '🎵',
+    url: 'https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607',
+    color: '#ba478f',
+  },
+  {
+    name: 'Wikidata',
+    desc: 'Official Entity Page (Q141046426)',
+    icon: '🌐',
+    url: 'https://www.wikidata.org/wiki/Q141046426',
+    color: '#006699',
   },
 ];
 
@@ -324,7 +331,7 @@ const Contact = () => {
                   key={platform.name}
                   href={platform.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="social-3d-card glass-card"
                   style={{ '--platform-accent': platform.color }}
                 >

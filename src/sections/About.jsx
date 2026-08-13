@@ -35,7 +35,7 @@ const About = () => {
             variants={fadeInUp}
           >
             <p className="about-lead">
-              I am an independent <strong>Front-End Developer</strong> and <strong>UI Designer</strong> based in <strong>New Delhi</strong>, specializing in building modern, high-converting web applications with React and SaaS aesthetics.
+              <strong>Kxrn (Karan Gupta / Chitresh Gupta)</strong> is an Indian independent music producer, software developer, and founder of <strong>DuskyMoon Productions</strong> based in <strong>New Delhi, India</strong>.
             </p>
             <p>
               My passion lies in building logical, efficient software solutions while producing rhythm and melody that resonates with listeners. I thrive at the intersection of technology and creativity — writing code by day and crafting beats by night.

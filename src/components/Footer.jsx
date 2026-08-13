@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-inner">
           <div className="footer-brand">
-            <span className="footer-logo">Karan Gupta<span className="logo-dot">.</span></span>
-            <p className="footer-tagline">Software Developer &amp; Entrepreneur</p>
+            <span className="footer-logo">Kxrn<span className="logo-dot">.</span></span>
+            <p className="footer-tagline">Software Developer &amp; Music Producer · Founder of DuskyMoon Productions</p>
           </div>
           <div className="footer-links">
             <a href="#about">About</a>
@@ -18,8 +18,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="copyright-text">&copy; 2026 Karan Gupta. Building logic. Producing rhythm.</p>
-          <p className="footer-label">DuskyMoon Productions</p>
+          <p className="copyright-text">&copy; 2026 DuskyMoon Productions. All rights reserved. Founded by Kxrn (Karan Gupta / Chitresh Gupta).</p>
+          <p className="footer-label">🌙 DuskyMoon Productions</p>
         </div>
       </div>
     </footer>
