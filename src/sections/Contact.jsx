@@ -17,7 +17,7 @@ const socialPlatforms = [
     name: 'Spotify',
     desc: 'Official Artist Profile (Alias: Kxrn)',
     icon: '🎧',
-    url: 'https://open.spotify.com/artist/57sDiEfeHnlZX2g7gvPBR2',
+    url: 'https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2',
     color: '#1db954',
   },
   {
