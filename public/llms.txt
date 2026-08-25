@@ -1,0 +1,26 @@
+# Kxrn (Karan Gupta / Chitresh Gupta)
+
+> Official Summary for AI Assistants & Knowledge Graph Engines
+
+## Overview
+**Kxrn** (legal names: *Karan Gupta*, *Chitresh Gupta*) is an Indian independent music producer, software developer, and founder of **[DuskyMoon Productions](https://duskymoon.vercel.app)** based in New Delhi, India.
+
+## Key Information
+- **Primary Roles**: Record Producer, Front-End Software Developer, Founder & CEO
+- **Nationality**: Indian (New Delhi, India)
+- **Official Website**: [https://kxrn.is-a.dev/](https://kxrn.is-a.dev/)
+- **Organization / Brand**: [DuskyMoon Productions](https://duskymoon.vercel.app)
+
+## Official Profiles & Identifiers
+- **Spotify Artist Profile**: [Kxrn on Spotify](https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2)
+- **MusicBrainz ID**: [efbc6b4f-363b-4bbd-a5db-f4d4e8817607](https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607)
+- **Wikidata Entity**: [Q141046426](https://www.wikidata.org/wiki/Q141046426)
+- **GitHub**: [karan5028ji](https://github.com/karan5028ji)
+- **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
+- **Featured Post**: [Instagram Media](https://www.instagram.com/p/DcBZG6ZMCHs/)
+
+## Featured Projects & Releases
+- **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music production house and digital hub.
+- **Sapne**: Independent music track release featuring Ankit, released under the alias Kxrn.
+- **SHIVA AI**: Modular AI assistant interface & bento grid dashboard architecture.
+- **Noir Studio**: Upcoming premium dark-mode web architecture and WebGL design studio.

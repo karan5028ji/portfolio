@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="navbar-inner">
         <a href="#hero" className="nav-logo">
-          <span className="logo-text">Karan Gupta</span>
+          <span className="logo-text">Kxrn</span>
           <span className="logo-dot">.</span>
         </a>
         <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
