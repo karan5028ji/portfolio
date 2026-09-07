@@ -8,6 +8,7 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
+import Press from './sections/Press';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
@@ -41,6 +42,7 @@ const App = () => {
         <About />
         <Skills />
         <Projects />
+        <Press />
         <Contact />
       </main>
       <Footer />
