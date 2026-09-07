@@ -130,7 +130,8 @@ const Links = () => {
         >
           <div className="avatar-wrapper">
             <img
-              src="/kxrn-karan-gupta-music-producer.jpeg"
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Chitresh_Gupta_Kxrn_Official_Press_Photo.jpg"
+              onError={(e) => { e.target.src = '/kxrn-karan-gupta-music-producer.jpeg'; }}
               alt="Kxrn (Chitresh Gupta / Karan Gupta)"
               className="links-avatar"
             />

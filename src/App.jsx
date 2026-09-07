@@ -57,7 +57,12 @@ const App = () => {
   }, [isLinksPage]);
 
   if (isLinksPage) {
-    return <Links />;
+    return (
+      <>
+        <CustomCursor />
+        <Links />
+      </>
+    );
   }
 
   return (
