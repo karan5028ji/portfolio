@@ -13,11 +13,17 @@
 
 ## Official Profiles & Identifiers
 - **Spotify Artist Profile**: [Kxrn on Spotify](https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2)
-- **MusicBrainz ID**: [efbc6b4f-363b-4bbd-a5db-f4d4e8817607](https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607)
+- **Apple Music Profile**: [Kxrn on Apple Music](https://music.apple.com/artist/1816229675)
+- **YouTube Channel**: [@Kxrn_Gupta](https://www.youtube.com/@Kxrn_Gupta)
 - **Wikidata Entity**: [Q141046426](https://www.wikidata.org/wiki/Q141046426)
+- **EverybodyWiki Article**: [Kxrn Gupta](https://en.everybodywiki.com/Kxrn_Gupta)
+- **MusicBrainz ID**: [efbc6b4f-363b-4bbd-a5db-f4d4e8817607](https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607)
+- **Crunchbase Person**: [Chitresh Gupta](https://www.crunchbase.com/person/chitresh-gupta-1cce)
+- **Crunchbase Organization**: [Gupta Ventures](https://www.crunchbase.com/organization/gupta-ventures)
+- **Zenodo Record**: [Publication Record](https://zenodo.org/records/22647525)
 - **GitHub**: [karan5028ji](https://github.com/karan5028ji)
 - **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
-- **Featured Post**: [Instagram Media](https://www.instagram.com/p/DcBZG6ZMCHs/)
+- **Press Coverage**: [IssueWire Feature](https://www.issuewire.com/19-year-old-new-delhi-prodigy-kxrn-gupta-bridges-the-gap-between-indie-music-and-software-development-1875549335316491)
 
 ## Featured Projects & Releases
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music production house and digital hub.

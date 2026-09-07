@@ -42,6 +42,12 @@ const linkGroups = [
         icon: '🌙',
       },
       {
+        title: 'Gupta Ventures (Crunchbase)',
+        desc: 'Parent Business Entity Profile',
+        url: 'https://www.crunchbase.com/organization/gupta-ventures',
+        icon: '💼',
+      },
+      {
         title: 'GitHub Repositories',
         desc: '@karan5028ji · SwarmForge & AI',
         url: 'https://github.com/karan5028ji',
@@ -52,6 +58,12 @@ const linkGroups = [
   {
     groupTitle: 'DATABASE & PRESS',
     items: [
+      {
+        title: 'Crunchbase Person Profile',
+        desc: 'Chitresh Gupta Executive Profile',
+        url: 'https://www.crunchbase.com/person/chitresh-gupta-1cce',
+        icon: '👤',
+      },
       {
         title: 'Wikidata Entity',
         desc: 'Q141046426 Official Record',
@@ -69,6 +81,12 @@ const linkGroups = [
         desc: 'Artist & Producer Identifier',
         url: 'https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607',
         icon: '🎵',
+      },
+      {
+        title: 'Zenodo Research Record',
+        desc: 'Open-Access Publication & Archival',
+        url: 'https://zenodo.org/records/22647525',
+        icon: '🔬',
       },
       {
         title: 'IssueWire Press Release',
