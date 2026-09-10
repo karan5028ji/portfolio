@@ -5,6 +5,17 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
+    title: 'Win-Optimizer-Pro',
+    subtitle: 'Microsoft Windows Package Manager (winget)',
+    description: 'A high-performance Windows system optimization utility. Now officially accepted into the Microsoft Windows Package Manager registry.',
+    longDescription: 'Win-Optimizer-Pro is a high-performance Windows system optimization utility designed to clean temporary junk, optimize system settings, and enhance overall PC performance. Officially accepted and published into the Microsoft Windows Package Manager (winget) repository for instant terminal deployment.',
+    command: 'winget install karan5028ji.WinOptimizerPro',
+    tags: ['C++', 'Windows CLI', 'winget', 'System Utility'],
+    icon: '⚡',
+    accent: '#22c55e',
+  },
+  {
+    id: 2,
     title: 'SHIVA AI',
     subtitle: 'Modular AI Platform Interface',
     description: 'Developed a high-converting, dark-themed landing page featuring a modern "Bento Grid" layout for a personalized local AI assistant.',
@@ -14,7 +25,7 @@ const projects = [
     accent: '#00c2ff',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Noir Studio',
     subtitle: 'Upcoming Premium Web Studio',
     description: 'An upcoming premium digital design and web architecture studio delivering immersive, high-end digital experiences and sleek aesthetics.',
@@ -24,7 +35,7 @@ const projects = [
     accent: '#a855f7',
   },
   {
-    id: 3,
+    id: 4,
     title: 'DuskyMoon Productions',
     subtitle: 'Digital Solutions Hub · CEO & Founder',
     description: 'Established a creative digital solutions hub managing end-to-end project lifecycles, cinematic web aesthetics, and color grading.',
@@ -34,7 +45,7 @@ const projects = [
     accent: '#3b82f6',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Sapne',
     subtitle: 'Music Track Release · Alias Kxrn',
     description: 'An independent music track release featuring Ankit, highlighting creative direction, technical audio production, and sound engineering.',
@@ -72,6 +83,14 @@ const handleTiltReset = (e) => {
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
+  const [copiedId, setCopiedId] = useState(null);
+
+  const handleCopy = (text, id, e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
   return (
     <section id="projects" className="section projects">
@@ -111,6 +130,33 @@ const Projects = () => {
               <h3 className="project-title">{project.title}</h3>
               <p className="project-subtitle">{project.subtitle}</p>
               <p className="project-desc">{project.description}</p>
+              
+              {project.command && (
+                <div className="terminal-install-block" onClick={(e) => e.stopPropagation()}>
+                  <p className="terminal-label">Install via Windows Terminal:</p>
+                  <div className="terminal-box">
+                    <span className="terminal-cmd"><span>$</span> {project.command}</span>
+                    <button 
+                      className="terminal-copy-btn"
+                      onClick={(e) => handleCopy(project.command, project.id, e)}
+                      title="Copy to clipboard"
+                    >
+                      {copiedId === project.id ? (
+                        <>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span style={{ color: '#22c55e' }}>Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                          <span>Copy</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
+
               <div className="project-tags">
                 {project.tags.map((tag) => (
                   <span key={tag} className="project-tag">{tag}</span>
@@ -146,6 +192,33 @@ const Projects = () => {
               <h3 className="modal-title">{selected.title}</h3>
               <p className="modal-subtitle">{selected.subtitle}</p>
               <p className="modal-desc">{selected.longDescription}</p>
+              
+              {selected.command && (
+                <div className="terminal-install-block" style={{ marginBottom: '24px' }}>
+                  <p className="terminal-label">Install via Windows Terminal:</p>
+                  <div className="terminal-box">
+                    <span className="terminal-cmd"><span>$</span> {selected.command}</span>
+                    <button 
+                      className="terminal-copy-btn"
+                      onClick={(e) => handleCopy(selected.command, `modal-${selected.id}`, e)}
+                      title="Copy to clipboard"
+                    >
+                      {copiedId === `modal-${selected.id}` ? (
+                        <>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span style={{ color: '#22c55e' }}>Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                          <span>Copy</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
+
               <div className="modal-tags">
                 {selected.tags.map((tag) => (
                   <span key={tag} className="project-tag">{tag}</span>
