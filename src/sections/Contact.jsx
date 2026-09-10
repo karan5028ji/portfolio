@@ -58,6 +58,7 @@ const sanitizeInput = (str) => {
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [honeypot, setHoneypot] = useState(''); // Bot trap — must stay empty
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [toast, setToast] = useState(null); // { type: 'success' | 'error', text: '' }
@@ -100,6 +101,9 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Bot trap: if the hidden honeypot field was filled, silently drop the submission
+    if (honeypot) return;
+
     if (cooldown > 0 || isSubmitting) return;
 
     // Validate all fields
@@ -129,13 +133,11 @@ const Contact = () => {
       message: sanitizeInput(formData.message),
     };
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_yrljtwj';
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_yu5uwxr';
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '0VwA1aeQA2YXTrSxW';
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     try {
-      console.log('Sending via EmailJS...', { serviceId, templateId, publicKey });
-      
       // Initialize SDK
       try {
         emailjs.init(publicKey);
@@ -238,6 +240,18 @@ const Contact = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Honeypot: hidden from real users, catches bots that auto-fill forms */}
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0, pointerEvents: 'none' }}
+            />
 
             <div className="form-group">
               <input

@@ -1,40 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projectsData } from '../data/projectsData';
-import { navigate } from '../utils/navigate';
-import './Projects.css';
+import './ProjectsPage.css';
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
+const categories = ['All', 'System & Utility', 'AI & Systems', 'Web & Design', 'Enterprise & Media', 'Music & Sound'];
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   }),
 };
 
-const handleTilt = (e) => {
-  const card = e.currentTarget;
-  const rect = card.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
-  const rotateX = ((y - centerY) / centerY) * 8;
-  const rotateY = ((centerX - x) / centerX) * 8;
-  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
-};
-
-const handleTiltReset = (e) => {
-  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-};
-
-const Projects = () => {
+const ProjectsPage = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
   const [selected, setSelected] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
 
-  // Showcase top 4 featured projects on homepage
-  const featuredProjects = projectsData.slice(0, 4);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
+  const filteredProjects = activeCategory === 'All'
+    ? projectsData
+    : projectsData.filter((p) => p.category === activeCategory);
 
   const handleCopy = (text, id, e) => {
     e.stopPropagation();
@@ -43,51 +45,71 @@ const Projects = () => {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const handleNavigateToAllProjects = (e) => {
-    e.preventDefault();
-    navigate('/projects');
-  };
-
   return (
-    <section id="projects" className="section projects">
-      <div className="container">
+    <div className="projects-page">
+      <div className="projects-page-glow projects-page-glow--blue" />
+      <div className="projects-page-glow projects-page-glow--purple" />
+
+      {/* Main Content */}
+      <main className="projects-page-main">
         <motion.div
-          className="section-title"
+          className="projects-page-title"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          variants={fadeInUp}
+          animate="visible"
+          variants={titleVariants}
         >
-          <span className="section-label">Work</span>
-          <h2>Featured <span className="gradient-text">Projects</span></h2>
+          <h1 className="projects-page-h1">
+            All Projects &amp; <span className="gradient-text">Architecture</span>
+          </h1>
+          <p className="projects-page-subtitle">
+            A comprehensive repository of system utilities, autonomous AI frameworks, 3D web experiences, and sonic engineering.
+          </p>
         </motion.div>
-        
+
+        {/* Category Filters */}
         <motion.div
-          className="projects-grid"
+          className="category-filters"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
+          animate="visible"
+          variants={titleVariants}
         >
-          {featuredProjects.map((project, index) => (
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`filter-btn ${activeCategory === cat ? 'filter-btn--active' : ''}`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Projects Grid */}
+        <motion.div
+          className="all-projects-grid"
+          initial="hidden"
+          animate="visible"
+          key={activeCategory}
+        >
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="project-card glass-card"
-              custom={index * 0.12}
-              variants={fadeInUp}
-              onMouseMove={handleTilt}
-              onMouseLeave={handleTiltReset}
+              className="all-project-card glass-card"
+              custom={index * 0.1}
+              variants={cardVariants}
               onClick={() => setSelected(project)}
               style={{ '--project-accent': project.accent }}
             >
               <div className="project-card-accent" />
               <div className="project-header">
                 <span className="project-icon">{project.icon}</span>
-                <span className="project-number">0{index + 1}</span>
+                <span className="project-category-badge">{project.category}</span>
               </div>
+              
               <h3 className="project-title">{project.title}</h3>
               <p className="project-subtitle">{project.subtitle}</p>
               <p className="project-desc">{project.description}</p>
-              
+
               {project.command && (
                 <div className="terminal-install-block" onClick={(e) => e.stopPropagation()}>
                   <p className="terminal-label">Install via Windows Terminal:</p>
@@ -119,36 +141,17 @@ const Projects = () => {
                   <span key={tag} className="project-tag">{tag}</span>
                 ))}
               </div>
+
               <div className="project-cta">
-                <span>View Details</span>
+                <span>View Full Details</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
               </div>
             </motion.div>
           ))}
         </motion.div>
+      </main>
 
-        {/* Show More / Dedicated Page Redirect CTA */}
-        <motion.div
-          className="projects-more-container"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        >
-          <a
-            href="/projects"
-            onClick={handleNavigateToAllProjects}
-            className="btn-show-more glass-card"
-          >
-            <span>View All Projects</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-        </motion.div>
-      </div>
-
+      {/* Detail Modal */}
       <AnimatePresence>
         {selected && (
           <motion.div
@@ -171,7 +174,7 @@ const Projects = () => {
               <h3 className="modal-title">{selected.title}</h3>
               <p className="modal-subtitle">{selected.subtitle}</p>
               <p className="modal-desc">{selected.longDescription}</p>
-              
+
               {selected.command && (
                 <div className="terminal-install-block" style={{ marginBottom: '24px' }}>
                   <p className="terminal-label">Install via Windows Terminal:</p>
@@ -207,8 +210,8 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 };
 
-export default Projects;
+export default ProjectsPage;

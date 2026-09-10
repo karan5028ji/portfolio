@@ -117,6 +117,14 @@ const Starfield = ({ scrollProgress, isMobile }) => {
     return [geo, mat];
   }, [isMobile]);
 
+  // Dispose GPU resources when isMobile changes (prevents WebGL memory leaks)
+  useEffect(() => {
+    return () => {
+      geometry.dispose();
+      material.dispose();
+    };
+  }, [geometry, material]);
+
   useFrame(() => {
     if (pointsRef.current) {
       pointsRef.current.rotation.x += 0.0002;
@@ -153,6 +161,13 @@ const BackgroundScene = ({ scrollProgress, setBlurAmount, isMobile }) => {
       }),
     [uniforms]
   );
+
+  // Dispose GPU material on unmount
+  useEffect(() => {
+    return () => {
+      material.dispose();
+    };
+  }, [material]);
 
   useFrame((state, delta) => {
     uniforms.time.value += delta;
