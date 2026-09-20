@@ -58,12 +58,12 @@ const CustomCursor = () => {
     // Event delegation for interactive magnetic hover targets
     const handleElementHover = (e) => {
       const targetEl = e.target.closest(
-        'a, button, .btn, .glass-card, .project-card, .press-card, .skill-card, .social-3d-card, input, textarea'
+        'a, button, .btn, .glass-card, .project-card, .all-project-card, .press-card, .skill-card, .social-3d-card, input, textarea'
       );
 
       if (targetEl) {
         setIsHovered(true);
-        if (targetEl.classList.contains('project-card')) {
+        if (targetEl.classList.contains('project-card') || targetEl.classList.contains('all-project-card')) {
           setHoverText('VIEW');
         } else if (targetEl.classList.contains('press-card')) {
           setHoverText('READ');

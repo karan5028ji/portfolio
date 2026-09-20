@@ -23,6 +23,22 @@ const cardVariants = {
   }),
 };
 
+const handleTilt = (e) => {
+  const card = e.currentTarget;
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  const rotateX = ((y - centerY) / centerY) * 8;
+  const rotateY = ((centerX - x) / centerX) * 8;
+  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+};
+
+const handleTiltReset = (e) => {
+  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+};
+
 const ProjectsPage = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [selected, setSelected] = useState(null);
@@ -47,8 +63,9 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects-page">
-      <div className="projects-page-glow projects-page-glow--blue" />
-      <div className="projects-page-glow projects-page-glow--purple" />
+      {/* Refined De-AI Architectural Lighting */}
+      <div className="projects-page-spotlight" />
+      <div className="projects-page-horizon-beam" />
 
       {/* Main Content */}
       <main className="projects-page-main">
@@ -97,6 +114,8 @@ const ProjectsPage = () => {
               className="all-project-card glass-card"
               custom={index * 0.1}
               variants={cardVariants}
+              onMouseMove={handleTilt}
+              onMouseLeave={handleTiltReset}
               onClick={() => setSelected(project)}
               style={{ '--project-accent': project.accent }}
             >
@@ -151,7 +170,7 @@ const ProjectsPage = () => {
         </motion.div>
       </main>
 
-      {/* Detail Modal */}
+      {/* Detail Modal with Direct Action Button */}
       <AnimatePresence>
         {selected && (
           <motion.div
@@ -168,6 +187,7 @@ const ProjectsPage = () => {
               exit={{ opacity: 0, y: 40, scale: 0.95 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
+              style={{ '--project-accent': selected.accent }}
             >
               <button className="modal-close" onClick={() => setSelected(null)}>✕</button>
               <div className="modal-icon">{selected.icon}</div>
@@ -201,11 +221,29 @@ const ProjectsPage = () => {
                 </div>
               )}
 
-              <div className="modal-tags">
+              <div className="modal-tags" style={{ marginBottom: selected.externalUrl ? '24px' : '0' }}>
                 {selected.tags.map((tag) => (
                   <span key={tag} className="project-tag">{tag}</span>
                 ))}
               </div>
+
+              {/* Live Project CTA Button */}
+              {selected.externalUrl && (
+                <div className="modal-actions" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                  <a
+                    href={selected.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary modal-action-btn"
+                  >
+                    <span>{selected.ctaText || 'Visit Project'}</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </a>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
