@@ -13,12 +13,12 @@ const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only enable custom cursor on fine pointer devices (desktop/mouse)
+    // Only disable custom cursor on pure touch devices (like mobile phones)
     const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
     if (isTouch) return;
 
     const handleMouseMove = (e) => {
-      if (!isVisible) setIsVisible(true);
+      setIsVisible(true);
       target.current = { x: e.clientX, y: e.clientY };
 
       // Instant position for central dot
@@ -58,13 +58,15 @@ const CustomCursor = () => {
     // Event delegation for interactive magnetic hover targets
     const handleElementHover = (e) => {
       const targetEl = e.target.closest(
-        'a, button, .btn, .glass-card, .project-card, .skill-card, .social-3d-card, input, textarea'
+        'a, button, .btn, .glass-card, .project-card, .press-card, .skill-card, .social-3d-card, input, textarea'
       );
 
       if (targetEl) {
         setIsHovered(true);
         if (targetEl.classList.contains('project-card')) {
           setHoverText('VIEW');
+        } else if (targetEl.classList.contains('press-card')) {
+          setHoverText('READ');
         } else if (targetEl.classList.contains('social-3d-card')) {
           setHoverText('OPEN');
         } else if (targetEl.tagName === 'BUTTON' || targetEl.classList.contains('btn')) {
@@ -89,23 +91,26 @@ const CustomCursor = () => {
       document.removeEventListener('mouseover', handleElementHover);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isVisible]);
-
-  if (!isVisible) return null;
+  }, []);
 
   return (
     <>
-      {/* Central Cyan Glow Dot with nested inner element */}
-      <div ref={dotRef} className="cyber-cursor-dot">
+      {/* Central Cyan Glow Dot (Direct Viewport Child) */}
+      <div
+        ref={dotRef}
+        className="cyber-cursor-dot"
+        style={{ display: isVisible ? 'block' : 'none' }}
+      >
         <div className={`cyber-cursor-dot-inner ${isMouseDown ? 'cyber-cursor-dot-inner--active' : ''}`} />
       </div>
 
-      {/* Trailing Outer Ring with Magnetic Scaling */}
+      {/* Trailing Outer Ring with Magnetic Scaling (Direct Viewport Child) */}
       <div
         ref={ringRef}
         className={`cyber-cursor-ring ${isHovered ? 'cyber-cursor-ring--hover' : ''} ${
           isMouseDown ? 'cyber-cursor-ring--click' : ''
         }`}
+        style={{ display: isVisible ? 'flex' : 'none' }}
       >
         {hoverText && <span className="cyber-cursor-text">{hoverText}</span>}
       </div>

@@ -24,6 +24,9 @@
 - **GitHub**: [karan5028ji](https://github.com/karan5028ji)
 - **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
 - **Press Coverage**: [IssueWire Feature](https://www.issuewire.com/19-year-old-new-delhi-prodigy-kxrn-gupta-bridges-the-gap-between-indie-music-and-software-development-1875549335316491)
+- **HackerNoon Tech Brief**: [How I Built a Zero-Cost Multi-Agent AI System](https://hackernoon.com/u/kxrngupta)
+- **CoderLegion Staff Pick**: [Building Zero-Cost Multi-Agent Orchestrators](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)
+- **Medium Publication**: [Zero-Cost Multi-Agent AI Orchestrators](https://medium.com/@karan5028ji/building-zero-cost-multi-agent-ai-orchestrators-local-assistants-my-journey-with-swarmforge-and-578caafb2707)
 
 ## Featured Projects & Releases
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music production house and digital hub.

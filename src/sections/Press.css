@@ -6,91 +6,262 @@
 .press-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
 .press-card {
-  padding: 36px 32px;
+  padding: 26px 28px;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  will-change: transform;
 }
 
 .press-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 194, 255, 0.1), 0 0 0 1px var(--glass-border-hover);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--glass-border-hover);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Dynamic Accent Glow Bar */
+.press-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--press-accent, var(--accent-blue));
+  opacity: 0;
+  transition: opacity 0.4s ease, box-shadow 0.4s ease;
+}
+
+.press-card:hover .press-card-accent {
+  opacity: 1;
+  box-shadow: 0 2px 14px var(--press-accent, var(--accent-blue));
 }
 
 .press-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+
+.press-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .press-icon {
-  font-size: 2rem;
-}
-
-.press-badge {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--accent-blue);
-  padding: 4px 12px;
-  border-radius: 50px;
-  background: rgba(0, 194, 255, 0.08);
-  border: 1px solid rgba(0, 194, 255, 0.2);
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 .press-source {
-  font-size: 0.8rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  color: var(--text-primary);
+  display: block;
+}
+
+.press-index {
+  font-size: 0.7rem;
   color: var(--text-muted);
-  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.press-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-blue);
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgba(0, 194, 255, 0.08);
+  border: 1px solid rgba(0, 194, 255, 0.22);
 }
 
 .press-title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 14px;
+  line-height: 1.35;
+  margin-bottom: 5px;
   color: var(--text-primary);
 }
 
+.press-subtitle {
+  font-size: 0.78rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
 .press-desc {
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 24px;
+  line-height: 1.55;
+  margin-bottom: 16px;
   flex: 1;
 }
 
+/* Compact Tag Pills */
+.press-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.press-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+/* Press Footer with Overview & Direct Read Link */
+.press-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 12px;
+}
+
+.press-cta-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.press-card:hover .press-cta-detail {
+  color: var(--accent-blue);
+  gap: 9px;
+}
+
 .press-link {
-  align-self: flex-start;
-  gap: 8px;
-  font-size: 0.85rem;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-weight: 600;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.press-link:hover {
+  background: var(--press-accent, var(--accent-blue));
+  border-color: var(--press-accent, var(--accent-blue));
+  color: #08080d;
+  box-shadow: 0 4px 18px rgba(0, 194, 255, 0.25);
 }
 
 .press-link svg {
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .press-link:hover svg {
-  transform: translate(3px, -3px);
+  transform: translate(2px, -2px);
 }
 
-@media (max-width: 768px) {
+/* Modal Extensions for Press */
+.modal-header-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.modal-badge-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.press-source-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  background: var(--press-accent, var(--accent-blue));
+  color: #08080d;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 194, 255, 0.35);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 968px) {
   .press-grid {
     grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 0 auto;
   }
+}
+
+@media (max-width: 480px) {
   .press-card {
-    padding: 28px 24px;
+    padding: 20px 18px;
+  }
+  .press-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .press-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .press-link {
+    justify-content: center;
+    width: 100%;
+  }
+  .press-cta-detail {
+    justify-content: center;
   }
 }
