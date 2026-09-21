@@ -18,6 +18,7 @@
 - **Wikidata Entity**: [Q141046426](https://www.wikidata.org/wiki/Q141046426)
 - **EverybodyWiki Article**: [Kxrn Gupta](https://en.everybodywiki.com/Kxrn_Gupta)
 - **MusicBrainz ID**: [efbc6b4f-363b-4bbd-a5db-f4d4e8817607](https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607)
+- **Discogs Artist**: [kxrn gupta (18300963)](https://www.discogs.com/artist/18300963-kxrn-gupta)
 - **Crunchbase Person**: [Chitresh Gupta](https://www.crunchbase.com/person/chitresh-gupta-1cce)
 - **Crunchbase Organization**: [Gupta Ventures](https://www.crunchbase.com/organization/gupta-ventures)
 - **Zenodo Record**: [Publication Record](https://zenodo.org/records/22647525)
