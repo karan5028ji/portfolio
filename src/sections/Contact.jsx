@@ -254,48 +254,63 @@ const Contact = () => {
             />
 
             <div className="form-group">
+              <label htmlFor="contact-name">Your Name</label>
               <input
                 type="text"
                 name="name"
                 id="contact-name"
-                placeholder=" "
+                placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? 'contact-name-error' : undefined}
                 required
               />
-              <label htmlFor="contact-name">Your Name</label>
-              <div className="form-line" />
-              {errors.name && <span className="field-error-text">{errors.name}</span>}
+              {errors.name && (
+                <span id="contact-name-error" className="field-error-text" role="alert" aria-live="polite">
+                  {errors.name}
+                </span>
+              )}
             </div>
 
             <div className="form-group">
+              <label htmlFor="contact-email">Email Address</label>
               <input
                 type="email"
                 name="email"
                 id="contact-email"
-                placeholder=" "
+                placeholder="your.email@example.com"
                 value={formData.email}
                 onChange={handleChange}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? 'contact-email-error' : undefined}
                 required
               />
-              <label htmlFor="contact-email">Email Address</label>
-              <div className="form-line" />
-              {errors.email && <span className="field-error-text">{errors.email}</span>}
+              {errors.email && (
+                <span id="contact-email-error" className="field-error-text" role="alert" aria-live="polite">
+                  {errors.email}
+                </span>
+              )}
             </div>
 
             <div className="form-group">
+              <label htmlFor="contact-message">Your Message</label>
               <textarea
                 name="message"
                 id="contact-message"
                 rows="5"
-                placeholder=" "
+                placeholder="Tell me about your project or inquiry..."
                 value={formData.message}
                 onChange={handleChange}
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? 'contact-message-error' : undefined}
                 required
               />
-              <label htmlFor="contact-message">Your Message</label>
-              <div className="form-line" />
-              {errors.message && <span className="field-error-text">{errors.message}</span>}
+              {errors.message && (
+                <span id="contact-message-error" className="field-error-text" role="alert" aria-live="polite">
+                  {errors.message}
+                </span>
+              )}
             </div>
 
             <button

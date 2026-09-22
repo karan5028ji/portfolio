@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projectsData } from '../data/projectsData';
 import { navigate } from '../utils/navigate';
@@ -32,6 +32,16 @@ const handleTiltReset = (e) => {
 const Projects = () => {
   const [selected, setSelected] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelected(null);
+    };
+    if (selected) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selected]);
 
   // Showcase top 4 featured projects on homepage
   const featuredProjects = projectsData.slice(0, 4);
@@ -160,15 +170,24 @@ const Projects = () => {
           >
             <motion.div
               className="modal-content glass-card"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby={`project-modal-title-${selected.id}`}
               initial={{ opacity: 0, y: 60, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 40, scale: 0.95 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
-              <button className="modal-close" onClick={() => setSelected(null)}>✕</button>
+              <button
+                className="modal-close"
+                onClick={() => setSelected(null)}
+                aria-label="Close project details modal"
+              >
+                ✕
+              </button>
               <div className="modal-icon">{selected.icon}</div>
-              <h3 className="modal-title">{selected.title}</h3>
+              <h3 id={`project-modal-title-${selected.id}`} className="modal-title">{selected.title}</h3>
               <p className="modal-subtitle">{selected.subtitle}</p>
               <p className="modal-desc">{selected.longDescription}</p>
               

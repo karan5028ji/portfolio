@@ -7,6 +7,13 @@ body,
   cursor: none !important;
 }
 
+/* Retain standard text caret inside editable text fields */
+input,
+textarea,
+[contenteditable="true"] {
+  cursor: text !important;
+}
+
 /* Touch devices safety: restore default behavior ONLY on pure touch screens */
 @media (hover: none) and (pointer: coarse) {
   html,

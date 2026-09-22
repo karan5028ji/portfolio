@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { pressData } from '../data/pressData';
 import './Press.css';
@@ -30,6 +30,16 @@ const handleTiltReset = (e) => {
 
 const Press = () => {
   const [selected, setSelected] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelected(null);
+    };
+    if (selected) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selected]);
 
   return (
     <section id="press" className="section press">
@@ -86,9 +96,9 @@ const Press = () => {
               <div className="press-footer">
                 <div className="press-cta-detail">
                   <span>View Overview</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
                   </svg>
                 </div>
                 <a
@@ -122,6 +132,9 @@ const Press = () => {
           >
             <motion.div
               className="modal-content glass-card"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby={`press-modal-title-${selected.id}`}
               initial={{ opacity: 0, y: 50, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 30, scale: 0.96 }}
@@ -129,7 +142,13 @@ const Press = () => {
               onClick={(e) => e.stopPropagation()}
               style={{ '--press-accent': selected.accent }}
             >
-              <button className="modal-close" onClick={() => setSelected(null)}>✕</button>
+              <button
+                className="modal-close"
+                onClick={() => setSelected(null)}
+                aria-label="Close publication details modal"
+              >
+                ✕
+              </button>
               
               <div className="modal-header-row">
                 <div className="modal-icon">{selected.icon}</div>
@@ -139,7 +158,7 @@ const Press = () => {
                 </div>
               </div>
 
-              <h3 className="modal-title">{selected.title}</h3>
+              <h3 id={`press-modal-title-${selected.id}`} className="modal-title">{selected.title}</h3>
               <p className="modal-subtitle">{selected.subtitle}</p>
               <p className="modal-desc">{selected.longDescription}</p>
 

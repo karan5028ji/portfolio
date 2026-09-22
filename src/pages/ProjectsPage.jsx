@@ -50,6 +50,16 @@ const ProjectsPage = () => {
     document.body.scrollTop = 0;
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelected(null);
+    };
+    if (selected) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selected]);
+
   const filteredProjects = activeCategory === 'All'
     ? projectsData
     : projectsData.filter((p) => p.category === activeCategory);
@@ -182,6 +192,9 @@ const ProjectsPage = () => {
           >
             <motion.div
               className="modal-content glass-card"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby={`all-project-modal-${selected.id}`}
               initial={{ opacity: 0, y: 60, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -189,9 +202,15 @@ const ProjectsPage = () => {
               onClick={(e) => e.stopPropagation()}
               style={{ '--project-accent': selected.accent }}
             >
-              <button className="modal-close" onClick={() => setSelected(null)}>✕</button>
+              <button
+                className="modal-close"
+                onClick={() => setSelected(null)}
+                aria-label="Close project details modal"
+              >
+                ✕
+              </button>
               <div className="modal-icon">{selected.icon}</div>
-              <h3 className="modal-title">{selected.title}</h3>
+              <h3 id={`all-project-modal-${selected.id}`} className="modal-title">{selected.title}</h3>
               <p className="modal-subtitle">{selected.subtitle}</p>
               <p className="modal-desc">{selected.longDescription}</p>
 

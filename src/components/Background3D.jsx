@@ -137,7 +137,7 @@ const Starfield = ({ scrollProgress, isMobile }) => {
 };
 
 /* ---- Main 3D Scene Controller ---- */
-const BackgroundScene = ({ scrollProgress, setBlurAmount, isMobile }) => {
+const BackgroundScene = ({ scrollProgress, isMobile }) => {
   const meshRef = useRef();
   const { camera } = useThree();
 
@@ -201,17 +201,14 @@ const BackgroundScene = ({ scrollProgress, setBlurAmount, isMobile }) => {
       );
 
       let currentOpacity = 1.0;
-      if (scrollProgress > 0.65) {
-        currentOpacity = Math.max(0, 1 - (scrollProgress - 0.65) / 0.3);
+      if (scrollProgress > 0.12) {
+        currentOpacity = Math.max(0, 1 - (scrollProgress - 0.12) / 0.3);
       }
       uniforms.opacity.value = THREE.MathUtils.lerp(
         uniforms.opacity.value,
         currentOpacity,
         0.1
       );
-
-      const blur = scrollProgress > 0.6 ? (scrollProgress - 0.6) * 25 : 0;
-      setBlurAmount(blur);
     }
   });
 
@@ -245,6 +242,8 @@ const Background3D = () => {
       if (totalScroll > 0) {
         const progress = Math.min(1, Math.max(0, window.scrollY / totalScroll));
         setScrollProgress(progress);
+        const newBlur = progress > 0.1 ? Math.min(24, Math.round((progress - 0.1) * 50)) : 0;
+        setBlurAmount((prev) => (prev !== newBlur ? newBlur : prev));
       }
     };
 
@@ -261,7 +260,7 @@ const Background3D = () => {
     <div
       className="bg-3d-wrapper"
       style={{
-        filter: `blur(${blurAmount}px)`,
+        filter: blurAmount > 0 ? `blur(${blurAmount}px)` : 'none',
         opacity: Math.max(0, 1 - (scrollProgress - 0.7) * 3),
       }}
     >
@@ -272,7 +271,6 @@ const Background3D = () => {
       >
         <BackgroundScene
           scrollProgress={scrollProgress}
-          setBlurAmount={setBlurAmount}
           isMobile={isMobile}
         />
       </Canvas>

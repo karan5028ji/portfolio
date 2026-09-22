@@ -91,6 +91,47 @@ const About = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Compact Verified Harvard Credential Strip */}
+        <motion.div
+          className="harvard-credential-card glass-card"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          custom={0.25}
+          variants={fadeInUp}
+        >
+          <div className="credential-left">
+            <div className="credential-icon-badge">🎓</div>
+            <div className="credential-details">
+              <div className="credential-title-row">
+                <span className="credential-inst">Harvard University</span>
+                <span className="credential-bullet">·</span>
+                <h3 className="credential-title">CS50's Introduction to Artificial Intelligence with Python</h3>
+                <span className="credential-verified-pill">
+                  <span className="status-dot" />
+                  Verified
+                </span>
+              </div>
+              <p className="credential-subtext">
+                Issued Sept 2026 · Instructor: David J. Malan · Topics: Machine Learning, Neural Networks, Optimization &amp; NLP
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="credential-verify-btn"
+          >
+            <span>Verify</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

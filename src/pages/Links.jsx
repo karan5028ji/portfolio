@@ -83,6 +83,18 @@ const linkGroups = [
         icon: '🎵',
       },
       {
+        title: 'Discogs Artist Profile',
+        desc: 'Official Discography (ID: 18300963)',
+        url: 'https://www.discogs.com/artist/18300963-kxrn-gupta',
+        icon: '💿',
+      },
+      {
+        title: 'Harvard University Credential',
+        desc: 'CS50 AI with Python · Verified',
+        url: 'https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e',
+        icon: '🎓',
+      },
+      {
         title: 'Zenodo Research Record',
         desc: 'Open-Access Publication & Archival',
         url: 'https://zenodo.org/records/22647525',

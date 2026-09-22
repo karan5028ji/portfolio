@@ -21,6 +21,7 @@
 - **Discogs Artist**: [kxrn gupta (18300963)](https://www.discogs.com/artist/18300963-kxrn-gupta)
 - **Crunchbase Person**: [Chitresh Gupta](https://www.crunchbase.com/person/chitresh-gupta-1cce)
 - **Crunchbase Organization**: [Gupta Ventures](https://www.crunchbase.com/organization/gupta-ventures)
+- **Harvard University Credential**: [CS50 AI with Python Certificate (ab707528-9255-4c2f-afa0-9fe5e7d4e45e)](https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e)
 - **Zenodo Record**: [Publication Record](https://zenodo.org/records/22647525)
 - **GitHub**: [karan5028ji](https://github.com/karan5028ji)
 - **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
@@ -30,7 +31,8 @@
 - **Medium Publication**: [Zero-Cost Multi-Agent AI Orchestrators](https://medium.com/@karan5028ji/building-zero-cost-multi-agent-ai-orchestrators-local-assistants-my-journey-with-swarmforge-and-578caafb2707)
 
 ## Featured Projects & Releases
+- **[Win-Optimizer-Pro](https://github.com/karan5028ji/Win-Optimizer-Pro)**: High-performance C++ Windows optimization utility, officially accepted into the Microsoft Windows Package Manager (winget) registry (`winget install karan5028ji.WinOptimizerPro`).
+- **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Enterprise-grade autonomous multi-agent AI orchestration platform enabling subagent delegation, distributed workflows, and parallel LLM execution.
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music production house and digital hub.
 - **Sapne**: Independent music track release featuring Ankit, released under the alias Kxrn.
-- **SHIVA AI**: Modular AI assistant interface & bento grid dashboard architecture.
 - **Noir Studio**: Upcoming premium dark-mode web architecture and WebGL design studio.

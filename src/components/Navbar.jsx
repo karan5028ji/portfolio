@@ -72,7 +72,8 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
+    <motion.header
+      role="banner"
       className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -91,7 +92,7 @@ const Navbar = () => {
           <span className="logo-text">Kxrn</span>
           <span className="logo-dot">.</span>
         </a>
-        <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
+        <nav className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`} aria-label="Main Navigation">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -104,12 +105,12 @@ const Navbar = () => {
           ))}
           <a
             href="#contact"
-            className="btn btn-primary nav-cta"
+            className="btn btn-secondary nav-cta"
             onClick={(e) => handleNavClick({ name: 'Contact', href: '#contact' }, e)}
           >
             Hire Me
           </a>
-        </div>
+        </nav>
         <button
           className={`nav-hamburger ${menuOpen ? 'nav-hamburger--open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -121,7 +122,7 @@ const Navbar = () => {
           <span aria-hidden="true" />
         </button>
       </div>
-    </motion.nav>
+    </motion.header>
   );
 };
 

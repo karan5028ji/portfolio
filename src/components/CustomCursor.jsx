@@ -62,6 +62,11 @@ const CustomCursor = () => {
       );
 
       if (targetEl) {
+        if (targetEl.tagName === 'INPUT' || targetEl.tagName === 'TEXTAREA') {
+          setIsHovered(false);
+          setHoverText('');
+          return;
+        }
         setIsHovered(true);
         if (targetEl.classList.contains('project-card') || targetEl.classList.contains('all-project-card')) {
           setHoverText('VIEW');
