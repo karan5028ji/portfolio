@@ -28,103 +28,136 @@
     <meta name="twitter:description" content="Official website of Kxrn (Karan Gupta / Chitresh Gupta), an Indian independent music producer, developer, and founder of DuskyMoon Productions." />
     <meta name="twitter:image" content="https://kxrn.is-a.dev/kxrn-karan-gupta-music-producer.jpeg" />
 
-    <!-- JSON-LD Schema Markup (Knowledge Graph Trigger) -->
+    <!-- JSON-LD Schema Markup (Knowledge Graph & Entity Disambiguation Graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kxrn Gupta",
-      "alternateName": [
-        "Chitresh Gupta",
-        "Kxrn",
-        "Chitresh"
-      ],
-      "url": "https://kxrn.is-a.dev/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chitresh_Gupta_Kxrn_Official_Press_Photo.jpg",
-      "birthDate": "2007-08-04",
-      "nationality": {
-        "@type": "Country",
-        "name": "India"
-      },
-      "jobTitle": [
-        "Music Producer",
-        "Software Developer",
-        "Founder"
-      ],
-      "knowsAbout": [
-        "Multi-Agent Systems",
-        "Autonomous AI Orchestration",
-        "Audio Engineering",
-        "Music Production",
-        "Software Development"
-      ],
-      "worksFor": [
+      "@graph": [
         {
-          "@type": "Organization",
-          "name": "Gupta Ventures",
-          "url": "https://www.crunchbase.com/organization/gupta-ventures"
-        },
-        {
-          "@type": "Organization",
-          "name": "DuskyMoon Productions"
-        }
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "CS50's Introduction to Artificial Intelligence with Python",
-          "credentialCategory": "Certificate",
-          "recognizedBy": {
-            "@type": "EducationalOrganization",
-            "name": "Harvard University",
-            "url": "https://www.harvard.edu"
+          "@type": "ProfilePage",
+          "@id": "https://kxrn.is-a.dev/#webpage",
+          "url": "https://kxrn.is-a.dev/",
+          "name": "Kxrn | Indian Independent Music Producer & Developer",
+          "description": "Official website and evidence hub of Kxrn (Karan Gupta / Chitresh Gupta), an Indian independent music producer, software developer, and founder of DuskyMoon Productions.",
+          "mainEntity": {
+            "@id": "https://kxrn.is-a.dev/#person"
           },
-          "url": "https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Certification in Ethical Hacking",
-          "credentialCategory": "Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Hacker X"
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://kxrn.is-a.dev/#website",
+            "url": "https://kxrn.is-a.dev/",
+            "name": "Kxrn Official",
+            "publisher": {
+              "@id": "https://kxrn.is-a.dev/#person"
+            }
           }
         },
         {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Introduction to HTML & CSS",
-          "credentialCategory": "Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Simplilearn"
-          }
+          "@type": "Person",
+          "@id": "https://kxrn.is-a.dev/#person",
+          "name": "Kxrn Gupta",
+          "alternateName": [
+            "Karan Gupta",
+            "Chitresh Gupta",
+            "Kxrn",
+            "Chitresh"
+          ],
+          "url": "https://kxrn.is-a.dev/",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chitresh_Gupta_Kxrn_Official_Press_Photo.jpg",
+          "birthDate": "2007-08-04",
+          "nationality": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "jobTitle": [
+            "Music Producer",
+            "Software Developer",
+            "Founder & CEO"
+          ],
+          "description": "Kxrn Gupta (Karan Gupta; born Chitresh Gupta) is an Indian independent music producer, software developer, and founder of DuskyMoon Productions based in New Delhi, India.",
+          "knowsAbout": [
+            "Multi-Agent Systems",
+            "Autonomous AI Orchestration",
+            "Audio Engineering",
+            "Music Production",
+            "Software Development",
+            "DSP & Sound Design"
+          ],
+          "founder": {
+            "@id": "https://kxrn.is-a.dev/#duskymoon"
+          },
+          "worksFor": [
+            {
+              "@id": "https://kxrn.is-a.dev/#duskymoon"
+            },
+            {
+              "@type": "Organization",
+              "name": "Gupta Ventures",
+              "url": "https://www.crunchbase.com/organization/gupta-ventures"
+            }
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "CS50's Introduction to Artificial Intelligence with Python",
+              "credentialCategory": "Certificate",
+              "recognizedBy": {
+                "@type": "EducationalOrganization",
+                "name": "Harvard University",
+                "url": "https://www.harvard.edu"
+              },
+              "url": "https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Certification in Ethical Hacking",
+              "credentialCategory": "Certificate",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Hacker X"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Introduction to HTML & CSS",
+              "credentialCategory": "Certificate",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Simplilearn"
+              }
+            }
+          ],
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q141046426",
+            "https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607",
+            "https://github.com/karan5028ji",
+            "https://www.linkedin.com/in/karanguptadev",
+            "https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2",
+            "https://music.apple.com/artist/1816229675",
+            "https://www.discogs.com/artist/18300963-kxrn-gupta",
+            "https://www.shazam.com/en-us/artist/kxrn-gupta/1816229675",
+            "https://genius.com/artists/Kxrn-gupta",
+            "https://www.crunchbase.com/person/chitresh-gupta-1cce",
+            "https://dev.to/karan5028ji",
+            "https://medium.com/@karan5028ji",
+            "https://hackernoon.com/u/kxrngupta",
+            "https://www.youtube.com/@Kxrn_Gupta",
+            "https://x.com/Kxrn_gupta",
+            "https://www.instagram.com/kxrn_gupta/"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://kxrn.is-a.dev/#duskymoon",
+          "name": "DuskyMoon Productions",
+          "alternateName": "DuskyMoon",
+          "url": "https://duskymoon.vercel.app",
+          "logo": "https://kxrn.is-a.dev/favicon.svg",
+          "founder": {
+            "@id": "https://kxrn.is-a.dev/#person"
+          },
+          "description": "Independent creative music production house, sound design studio, and digital solutions hub based in New Delhi, India."
         }
-      ],
-      "sameAs": [
-        "https://www.wikidata.org/wiki/Q141046426",
-        "https://github.com/karan5028ji",
-        "https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2",
-        "https://music.apple.com/artist/1816229675",
-        "https://www.youtube.com/@Kxrn_Gupta",
-        "https://www.instagram.com/kxrn_gupta/",
-        "https://x.com/Kxrn_gupta",
-        "https://genius.com/artists/Kxrn-gupta",
-        "https://www.crunchbase.com/person/chitresh-gupta-1cce",
-        "https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607",
-        "https://en.everybodywiki.com/Kxrn_Gupta",
-        "https://duskymoon-productions.fandom.com/wiki/Kxrn_Gupta",
-        "https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge",
-        "https://dev.to/karan5028ji",
-        "https://medium.com/@karan5028ji",
-        "https://hackernoon.com/u/kxrngupta",
-        "https://doi.org/10.5281/zenodo.22647525",
-        "https://www.shazam.com/en-us/artist/kxrn-gupta/1816229675",
-        "https://www.bandsintown.com/a/15664125",
-        "https://www.allmusic.com/profile/kxrngupta",
-        "https://www.discogs.com/artist/18300963-kxrn-gupta",
-        "https://gravatar.com/karan5028ji",
-        "https://www.linkedin.com/in/karanguptadev",
-        "https://www.issuewire.com/19-year-old-new-delhi-prodigy-kxrn-gupta-bridges-the-gap-between-indie-music-and-software-development-1875549335316491"
       ]
     }
     </script>

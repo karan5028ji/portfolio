@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '/projects' },
+  { name: 'Music', href: '/music' },
   { name: 'Press', href: '#press' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -31,7 +32,10 @@ const Navbar = () => {
     };
   }, []);
 
-  const isStandalonePage = pathname.toLowerCase().includes('/projects') || pathname.toLowerCase().includes('/links');
+  const isStandalonePage =
+    pathname.toLowerCase().includes('/projects') ||
+    pathname.toLowerCase().includes('/music') ||
+    pathname.toLowerCase().includes('/links');
   const isScrolled = scrolled || isStandalonePage;
 
   const handleNavClick = (link, e) => {
@@ -39,6 +43,9 @@ const Navbar = () => {
     if (link.name === 'Projects') {
       e.preventDefault();
       navigate('/projects');
+    } else if (link.name === 'Music') {
+      e.preventDefault();
+      navigate('/music');
     } else if (window.location.pathname !== '/') {
       e.preventDefault();
       navigate('/' + link.href);

@@ -7,6 +7,8 @@ const Footer = () => {
     e.preventDefault();
     if (href === '/projects') {
       navigate('/projects');
+    } else if (href === '/music') {
+      navigate('/music');
     } else if (window.location.pathname !== '/') {
       navigate('/' + href);
     } else {
@@ -34,6 +36,7 @@ const Footer = () => {
             <a href="#about" onClick={(e) => handleNav('#about', e)}>About</a>
             <a href="#skills" onClick={(e) => handleNav('#skills', e)}>Skills</a>
             <a href="/projects" onClick={(e) => handleNav('/projects', e)}>Projects</a>
+            <a href="/music" onClick={(e) => handleNav('/music', e)}>Music</a>
             <a href="#press" onClick={(e) => handleNav('#press', e)}>Press</a>
             <a href="#contact" onClick={(e) => handleNav('#contact', e)}>Contact</a>
           </div>

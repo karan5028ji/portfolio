@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Links.css';
 
@@ -148,6 +148,24 @@ const itemVariants = {
 };
 
 const Links = () => {
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = 'Links & Identifiers | Kxrn';
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const prevCanonical = canonical ? canonical.getAttribute('href') : null;
+    if (canonical) {
+      canonical.setAttribute('href', 'https://kxrn.is-a.dev/links');
+    }
+
+    return () => {
+      document.title = prevTitle;
+      if (canonical && prevCanonical) {
+        canonical.setAttribute('href', prevCanonical);
+      }
+    };
+  }, []);
+
   return (
     <div className="links-page">
       {/* Subtle VisionOS background glow */}
@@ -168,7 +186,7 @@ const Links = () => {
               alt="Kxrn (Chitresh Gupta / Karan Gupta)"
               className="links-avatar"
             />
-            <div className="verified-badge" title="Verified Artist & Developer">
+            <div className="verified-badge" title="Official Artist & Developer">
               ✓
             </div>
           </div>

@@ -129,10 +129,18 @@ const Projects = () => {
                   <span key={tag} className="project-tag">{tag}</span>
                 ))}
               </div>
-              <div className="project-cta">
-                <span>View Details</span>
+              <a
+                href={`/projects/${project.id}`}
+                className="project-cta"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  navigate(`/projects/${project.id}`);
+                }}
+              >
+                <span>View Architecture &amp; Specs</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </div>
+              </a>
             </motion.div>
           ))}
         </motion.div>
@@ -223,9 +231,24 @@ const Projects = () => {
                 ))}
               </div>
 
-              {/* Live Project CTA Button */}
-              {selected.externalUrl && (
-                <div className="modal-actions" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+              <div className="modal-actions" style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', marginTop: '16px', flexWrap: 'wrap' }}>
+                <a
+                  href={`/projects/${selected.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelected(null);
+                    navigate(`/projects/${selected.id}`);
+                  }}
+                  className="btn btn-secondary modal-action-btn"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <span>Full Technical Page</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+                {selected.externalUrl && (
                   <a
                     href={selected.externalUrl}
                     target="_blank"
@@ -238,8 +261,8 @@ const Projects = () => {
                       <polyline points="7 7 17 7 17 17" />
                     </svg>
                   </a>
-                </div>
-              )}
+                )}
+              </div>
             </motion.div>
           </motion.div>
         )}

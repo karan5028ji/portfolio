@@ -13,6 +13,8 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import Links from './pages/Links';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import MusicPage from './pages/MusicPage';
 
 const App = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -62,15 +64,28 @@ const App = () => {
     }
   }, [currentPath]);
 
+  const normalizedPath = currentPath.toLowerCase();
+
   const isLinksPage =
-    currentPath.toLowerCase().includes('/links') ||
+    normalizedPath.includes('/links') ||
     currentHash.toLowerCase().includes('#links');
 
-  const isProjectsPage =
-    currentPath.toLowerCase().includes('/projects') ||
-    currentHash.toLowerCase().includes('#projects-all');
+  const isMusicPage =
+    normalizedPath.startsWith('/music') ||
+    currentHash.toLowerCase().includes('#music');
 
-  const isStandalonePage = isLinksPage || isProjectsPage;
+  // Match /projects/:projectId
+  const projectDetailMatch = currentPath.match(/^\/projects\/([a-zA-Z0-9_-]+)/i);
+  const projectDetailId = projectDetailMatch ? projectDetailMatch[1] : null;
+
+  const isProjectsAllPage =
+    !projectDetailId &&
+    (normalizedPath === '/projects' ||
+      normalizedPath === '/projects/' ||
+      currentHash.toLowerCase().includes('#projects-all'));
+
+  const isStandalonePage =
+    isLinksPage || isMusicPage || isProjectsAllPage || Boolean(projectDetailId);
 
   useEffect(() => {
     if (isStandalonePage) return;
@@ -105,15 +120,23 @@ const App = () => {
     );
   }
 
-  // Navbar lives here — same React instance for both '/' and '/projects'
-  // This prevents Framer Motion from re-animating and scroll state from resetting on navigation
   return (
     <>
       <CustomCursor />
       <Navbar />
-      {isProjectsPage ? (
+      {projectDetailId ? (
+        <>
+          <ProjectDetailPage projectId={projectDetailId} />
+          <Footer />
+        </>
+      ) : isProjectsAllPage ? (
         <>
           <ProjectsPage />
+          <Footer />
+        </>
+      ) : isMusicPage ? (
+        <>
+          <MusicPage />
           <Footer />
         </>
       ) : (
