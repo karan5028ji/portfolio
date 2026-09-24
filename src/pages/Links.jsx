@@ -42,6 +42,12 @@ const linkGroups = [
         icon: '🌙',
       },
       {
+        title: 'Noir Studio (NoirWear)',
+        desc: 'Child Enterprise · Visit Pre-Launch ↗',
+        url: 'https://www.noirwear.in',
+        icon: '✨',
+      },
+      {
         title: 'Gupta Ventures (Crunchbase)',
         desc: 'Parent Business Entity Profile',
         url: 'https://www.crunchbase.com/organization/gupta-ventures',

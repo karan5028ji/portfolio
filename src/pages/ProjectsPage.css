@@ -192,3 +192,16 @@
   .category-filters { gap: 8px; }
   .filter-btn { padding: 8px 14px; font-size: 0.8rem; }
 }
+
+.project-cta--prelaunch {
+  color: #e9d5ff !important;
+  background: rgba(168, 85, 247, 0.14) !important;
+  border: 1px solid rgba(168, 85, 247, 0.45) !important;
+}
+
+.project-cta--prelaunch:hover {
+  background: rgba(168, 85, 247, 0.28) !important;
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.35);
+}

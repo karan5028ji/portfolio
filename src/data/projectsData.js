@@ -110,6 +110,7 @@ export const projectsData = [
     specs: {
       organization: 'DuskyMoon Productions',
       founder: 'Kxrn (Karan Gupta / Chitresh Gupta)',
+      childEnterprise: 'Noir Studio (noirwear.in)',
       location: 'New Delhi, India',
       status: 'Active Independent Enterprise',
       website: 'duskymoon.vercel.app'
@@ -130,35 +131,43 @@ export const projectsData = [
   {
     id: 'noir-studio',
     title: 'Noir Studio',
-    subtitle: 'Upcoming Premium Web Studio',
-    category: 'Web & Design',
-    role: 'Creative Director & WebGL Architect',
-    statusBadge: 'Design Framework & Vision',
-    description: 'An upcoming premium digital design and web architecture studio delivering immersive, high-end digital experiences and sleek aesthetics.',
-    longDescription: 'An upcoming premium digital design and web architecture studio. Focused on delivering immersive, high-end digital experiences, sleek animations, 3D WebGL interactions, and ultra-modern dark-themed aesthetics for future clients.',
-    overview: 'Noir Studio is an upcoming digital architecture studio focused on spatial web experiences, bespoke WebGL shaders, fluid micro-interactions, and dark tech-noir aesthetics. Built for modern brands that require visually memorable, high-performance web presences.',
-    externalUrl: 'https://github.com/karan5028ji',
-    ctaText: 'Explore Studio Vision',
-    tags: ['React', 'Three.js', 'UI/UX Design', 'Framer Motion', 'GLSL'],
+    subtitle: 'Luxury Brand & Web Studio · Child Enterprise',
+    category: 'Enterprise & Media',
+    role: 'Founder & Creative Director (Kxrn Gupta)',
+    statusBadge: 'Pre-Launch Live · noirwear.in',
+    description: 'An upcoming premium digital design, web architecture, and luxury streetwear studio operating as a child enterprise under DuskyMoon Productions.',
+    longDescription: 'Noir Studio (NoirWear) is an upcoming luxury brand and digital architecture studio operating as a child enterprise of DuskyMoon Productions. Focused on delivering immersive, high-end digital experiences, sleek animations, 3D WebGL interactions, and ultra-modern dark-themed aesthetics.',
+    overview: 'Noir Studio (live in pre-launch at noirwear.in) is a digital architecture and luxury streetwear enterprise founded by Kxrn Gupta under the parent umbrella of DuskyMoon Productions. Built for modern aesthetics requiring spatial web experiences, bespoke WebGL shaders, and fluid micro-interactions.',
+    preLaunchUrl: 'https://www.noirwear.in',
+    externalUrl: 'https://www.noirwear.in',
+    ctaText: 'Visit Pre-Launch',
+    tags: ['Child Enterprise', 'NoirWear', 'React', 'Three.js', 'UI/UX Design', 'WebGL'],
     icon: '✨',
     accent: '#a855f7',
     featured: true,
     highlights: [
+      'Official child enterprise under parent organization DuskyMoon Productions (noirwear.in).',
       'Hardware-accelerated 3D viewports utilizing Three.js and custom GLSL vertex/fragment shaders.',
       'VisionOS-inspired glassmorphism with dynamic ambient lighting cones and zero CSS layout shifts.',
       'Smooth inertial scrolling synchronization paired with Framer Motion exit/enter physics.'
     ],
     specs: {
-      framework: 'React 18 / Three.js / Fiber',
-      styling: 'Custom CSS Design System & Shaders',
-      focus: 'Interactive 3D Web Architecture',
-      creator: 'Kxrn Gupta'
+      enterprise: 'Noir Studio (NoirWear)',
+      parentEntity: 'DuskyMoon Productions',
+      founder: 'Kxrn Gupta (Karan Gupta)',
+      website: 'https://www.noirwear.in',
+      framework: 'React 18 / Three.js / Fiber'
     },
     timeline: [
       {
         version: 'Design Lab',
         date: '2026',
         milestone: 'Architecture blueprints, GLSL shader prototypes, and component library developed.'
+      },
+      {
+        version: 'Pre-Launch',
+        date: '2026',
+        milestone: 'Official pre-launch portal deployed at noirwear.in as a child enterprise of DuskyMoon Productions.'
       }
     ]
   },

@@ -9,7 +9,7 @@
 - **Primary Roles**: Record Producer, Front-End Software Developer, Founder & CEO
 - **Nationality**: Indian (New Delhi, India)
 - **Official Website**: [https://kxrn.is-a.dev/](https://kxrn.is-a.dev/)
-- **Organization / Brand**: [DuskyMoon Productions](https://duskymoon.vercel.app)
+- **Organization / Brand**: [DuskyMoon Productions](https://duskymoon.vercel.app) (Parent Entity) & [Noir Studio / NoirWear](https://www.noirwear.in) (Child Enterprise)
 
 ## Official Profiles & Identifiers
 - **Spotify Artist Profile**: [Kxrn on Spotify](https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2)
@@ -35,4 +35,4 @@
 - **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Enterprise-grade autonomous multi-agent AI orchestration platform enabling subagent delegation, distributed workflows, and parallel LLM execution.
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music production house and digital hub.
 - **Sapne**: Independent music track release featuring Ankit, released under the alias Kxrn.
-- **Noir Studio**: Upcoming premium dark-mode web architecture and WebGL design studio.
+- **[Noir Studio (NoirWear)](https://www.noirwear.in)**: Upcoming luxury brand, streetwear, and 3D WebGL design studio operating as a child enterprise under DuskyMoon Productions.

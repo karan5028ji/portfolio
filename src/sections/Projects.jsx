@@ -129,18 +129,35 @@ const Projects = () => {
                   <span key={tag} className="project-tag">{tag}</span>
                 ))}
               </div>
-              <a
-                href={`/projects/${project.id}`}
-                className="project-cta"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  navigate(`/projects/${project.id}`);
-                }}
-              >
-                <span>View Architecture &amp; Specs</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </a>
+              <div className="project-cta-group" style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                {project.preLaunchUrl && (
+                  <a
+                    href={project.preLaunchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-cta project-cta--prelaunch"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span>Visit Pre-Launch</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </a>
+                )}
+                <a
+                  href={`/projects/${project.id}`}
+                  className="project-cta"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navigate(`/projects/${project.id}`);
+                  }}
+                >
+                  <span>{project.preLaunchUrl ? 'Specs' : 'View Architecture & Specs'}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+                </a>
+              </div>
             </motion.div>
           ))}
         </motion.div>
