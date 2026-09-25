@@ -22,6 +22,8 @@
 - **Discogs Artist**: [kxrn gupta (18300963)](https://www.discogs.com/artist/18300963-kxrn-gupta)
 - **Crunchbase Person**: [Chitresh Gupta](https://www.crunchbase.com/person/chitresh-gupta-1cce)
 - **Crunchbase Organization**: [Gupta Ventures](https://www.crunchbase.com/organization/gupta-ventures)
+- **Musixmatch Verified Artist**: [kxrn-gupta](https://www.musixmatch.com/artist/kxrn-gupta)
+- **ORCID Researcher Record**: [0009-0005-5460-2941](https://orcid.org/0009-0005-5460-2941)
 - **Harvard University Credential**: [CS50 AI with Python Certificate (ab707528-9255-4c2f-afa0-9fe5e7d4e45e)](https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e)
 - **Zenodo Record**: [Publication Record](https://zenodo.org/records/22647525)
 - **GitHub**: [karan5028ji](https://github.com/karan5028ji)

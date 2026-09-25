@@ -107,10 +107,22 @@ const linkGroups = [
         icon: '🎓',
       },
       {
+        title: 'Musixmatch Verified Artist',
+        desc: 'Official Lyrics & Distribution Hub',
+        url: 'https://www.musixmatch.com/artist/kxrn-gupta',
+        icon: '✍️',
+      },
+      {
+        title: 'ORCID Verified Researcher',
+        desc: '0009-0005-5460-2941 · Academic Record',
+        url: 'https://orcid.org/0009-0005-5460-2941',
+        icon: '🔬',
+      },
+      {
         title: 'Zenodo Research Record',
         desc: 'Open-Access Publication & Archival',
         url: 'https://zenodo.org/records/22647525',
-        icon: '🔬',
+        icon: '📄',
       },
       {
         title: 'HackerNoon Tech Brief (Podcast)',
