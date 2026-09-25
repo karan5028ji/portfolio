@@ -65,6 +65,12 @@ const linkGroups = [
     groupTitle: 'DATABASE & PRESS',
     items: [
       {
+        title: 'Google Knowledge Panel',
+        desc: 'Official Google Entity Panel',
+        url: 'https://share.google/5AfjCZgxu7EtcNFup',
+        icon: '🌐',
+      },
+      {
         title: 'Crunchbase Person Profile',
         desc: 'Chitresh Gupta Executive Profile',
         url: 'https://www.crunchbase.com/person/chitresh-gupta-1cce',

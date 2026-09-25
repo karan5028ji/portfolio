@@ -12,6 +12,7 @@
 - **Organization / Brand**: [DuskyMoon Productions](https://duskymoon.vercel.app) (Parent Entity) & [Noir Studio / NoirWear](https://www.noirwear.in) (Child Enterprise)
 
 ## Official Profiles & Identifiers
+- **Google Knowledge Panel**: [Official Knowledge Graph Entity](https://share.google/5AfjCZgxu7EtcNFup)
 - **Spotify Artist Profile**: [Kxrn on Spotify](https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2)
 - **Apple Music Profile**: [Kxrn on Apple Music](https://music.apple.com/artist/1816229675)
 - **YouTube Channel**: [@Kxrn_Gupta](https://www.youtube.com/@Kxrn_Gupta)

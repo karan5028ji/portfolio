@@ -48,6 +48,13 @@ const socialPlatforms = [
     url: 'https://www.wikidata.org/wiki/Q141046426',
     color: '#006699',
   },
+  {
+    name: 'Google Knowledge Panel',
+    desc: 'Official Google Entity Node',
+    icon: '🌐',
+    url: 'https://share.google/5AfjCZgxu7EtcNFup',
+    color: '#4285F4',
+  },
 ];
 
 // XSS Input Sanitizer Helper
