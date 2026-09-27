@@ -131,6 +131,12 @@ const linkGroups = [
         icon: '🎙️',
       },
       {
+        title: 'IBM Bob 2.0 Hackathon Project',
+        desc: 'Official Lablab.ai Submission & Architecture',
+        url: 'https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon/swarmforge/swarmforge-agentic-ai-orchestration-with-bob',
+        icon: '🏆',
+      },
+      {
         title: 'CoderLegion Technical Article',
         desc: 'Staff Pick · SwarmForge & Multi-Agent AI',
         url: 'https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge',
