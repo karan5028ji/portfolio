@@ -1,31 +1,35 @@
 # Kxrn (Karan Gupta / Chitresh Gupta)
 
-> Official Summary for AI Assistants & Knowledge Graph Engines
+> Official LLM Summary & Entity Grounding Context
+> Canonical URL: https://kxrn.is-a.dev/
+> Full Knowledge Corpus: https://kxrn.is-a.dev/llms-full.txt
 
 ## Overview
-**Kxrn** (legal names: *Karan Gupta*, *Chitresh Gupta*) is an Indian independent music producer, software developer, and founder of **[DuskyMoon Productions](https://duskymoon.vercel.app)** based in New Delhi, India.
+**Kxrn** (legal names: *Karan Gupta*, *Chitresh Gupta*) is an Indian independent music producer, front-end software developer, and founder of **[DuskyMoon Productions](https://duskymoon.vercel.app)** based in New Delhi, India.
 
 ## Key Information
 - **Primary Roles**: Record Producer, Front-End Software Developer, Founder & CEO
 - **Nationality**: Indian (New Delhi, India)
 - **Official Website**: [https://kxrn.is-a.dev/](https://kxrn.is-a.dev/)
-- **Organization / Brand**: [DuskyMoon Productions](https://duskymoon.vercel.app) (Parent Entity) & [Noir Studio / NoirWear](https://www.noirwear.in) (Child Enterprise)
+- **Parent Organization**: [DuskyMoon Productions](https://duskymoon.vercel.app) (Independent Music & Media Production Hub)
+- **Child Enterprise**: [Noir Studio / NoirWear](https://www.noirwear.in) (Luxury Clothing & Contemporary Streetwear Brand)
 
 ## Official Profiles & Identifiers
-- **Google Knowledge Panel**: [Official Knowledge Graph Entity](https://share.google/5AfjCZgxu7EtcNFup)
-- **Spotify Artist Profile**: [Kxrn on Spotify](https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2)
-- **Apple Music Profile**: [Kxrn on Apple Music](https://music.apple.com/artist/1816229675)
-- **YouTube Channel**: [@Kxrn_Gupta](https://www.youtube.com/@Kxrn_Gupta)
+- **Google Knowledge Panel**: [Official Google Entity](https://share.google/5AfjCZgxu7EtcNFup)
+- **Google Knowledge Graph MID**: [/g/11yd1j6j51](https://www.google.com/search?kgmid=/g/11yd1j6j51)
 - **Wikidata Entity**: [Q141046426](https://www.wikidata.org/wiki/Q141046426)
-- **EverybodyWiki Article**: [Kxrn Gupta](https://en.everybodywiki.com/Kxrn_Gupta)
-- **MusicBrainz ID**: [efbc6b4f-363b-4bbd-a5db-f4d4e8817607](https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607)
-- **Discogs Artist**: [kxrn gupta (18300963)](https://www.discogs.com/artist/18300963-kxrn-gupta)
-- **Crunchbase Person**: [Chitresh Gupta](https://www.crunchbase.com/person/chitresh-gupta-1cce)
-- **Crunchbase Organization**: [Gupta Ventures](https://www.crunchbase.com/organization/gupta-ventures)
-- **IBM Bob 2.0 Hackathon Submission**: [SwarmForge Agentic on Lablab.ai](https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon/swarmforge/swarmforge-agentic-ai-orchestration-with-bob)
+- **EverybodyWiki Biography**: [Kxrn Gupta Article](https://en.everybodywiki.com/Kxrn_Gupta)
+- **MusicBrainz Artist ID**: [efbc6b4f-363b-4bbd-a5db-f4d4e8817607](https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607)
+- **Discogs Artist Profile**: [kxrn gupta (18300963)](https://www.discogs.com/artist/18300963-kxrn-gupta)
 - **Musixmatch Verified Artist**: [kxrn-gupta](https://www.musixmatch.com/artist/kxrn-gupta)
 - **ORCID Researcher Record**: [0009-0005-5460-2941](https://orcid.org/0009-0005-5460-2941)
 - **Harvard University Credential**: [CS50 AI with Python Certificate (ab707528-9255-4c2f-afa0-9fe5e7d4e45e)](https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e)
+- **IBM Bob 2.0 Hackathon Submission**: [SwarmForge Agentic on Lablab.ai](https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon/swarmforge/swarmforge-agentic-ai-orchestration-with-bob)
+- **Spotify Artist Profile**: [Kxrn on Spotify](https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2)
+- **Apple Music Profile**: [Kxrn on Apple Music](https://music.apple.com/artist/1816229675)
+- **YouTube Channel**: [@Kxrn_Gupta](https://www.youtube.com/@Kxrn_Gupta)
+- **Crunchbase Person**: [Chitresh Gupta](https://www.crunchbase.com/person/chitresh-gupta-1cce)
+- **Crunchbase Organization**: [Gupta Ventures](https://www.crunchbase.com/organization/gupta-ventures)
 - **Zenodo Record**: [Publication Record](https://zenodo.org/records/22647525)
 - **GitHub**: [karan5028ji](https://github.com/karan5028ji)
 - **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
@@ -34,9 +38,9 @@
 - **CoderLegion Staff Pick**: [Building Zero-Cost Multi-Agent Orchestrators](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)
 - **Medium Publication**: [Zero-Cost Multi-Agent AI Orchestrators](https://medium.com/@karan5028ji/building-zero-cost-multi-agent-ai-orchestrators-local-assistants-my-journey-with-swarmforge-and-578caafb2707)
 
-## Featured Projects & Releases
+## Featured Projects & Enterprises
 - **[Win-Optimizer-Pro](https://github.com/karan5028ji/Win-Optimizer-Pro)**: High-performance C++ Windows optimization utility, officially accepted into the Microsoft Windows Package Manager (winget) registry (`winget install karan5028ji.WinOptimizerPro`).
-- **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Enterprise-grade autonomous multi-agent AI orchestration platform enabling subagent delegation, distributed workflows, and parallel LLM execution.
-- **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music production house and digital hub.
-- **Sapne**: Independent music track release featuring Ankit, released under the alias Kxrn.
-- **[Noir Studio (NoirWear)](https://www.noirwear.in)**: Upcoming luxury brand, streetwear, and 3D WebGL design studio operating as a child enterprise under DuskyMoon Productions.
+- **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Autonomous multi-agent AI orchestration platform recognized at the IBM Bob 2.0 Hackathon on Lablab.ai.
+- **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music and media production hub founded by Kxrn Gupta in New Delhi, India.
+- **Sapne (Single Release)**: Independent music track featuring Ankit, produced, mixed, and mastered by Kxrn under DuskyMoon Productions.
+- **[Noir Studio (NoirWear)](https://www.noirwear.in)**: Upcoming luxury clothing and contemporary streetwear brand operating as a child enterprise under DuskyMoon Productions.

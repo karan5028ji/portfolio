@@ -131,38 +131,38 @@ export const projectsData = [
   {
     id: 'noir-studio',
     title: 'Noir Studio',
-    subtitle: 'Luxury Brand & Web Studio · Child Enterprise',
+    subtitle: 'Luxury Clothing Brand · Child Enterprise',
     category: 'Enterprise & Media',
     role: 'Founder & Creative Director (Kxrn Gupta)',
     statusBadge: 'Pre-Launch Live · noirwear.in',
-    description: 'An upcoming premium digital design, web architecture, and luxury streetwear studio operating as a child enterprise under DuskyMoon Productions.',
-    longDescription: 'Noir Studio (NoirWear) is an upcoming luxury brand and digital architecture studio operating as a child enterprise of DuskyMoon Productions. Focused on delivering immersive, high-end digital experiences, sleek animations, 3D WebGL interactions, and ultra-modern dark-themed aesthetics.',
-    overview: 'Noir Studio (live in pre-launch at noirwear.in) is a digital architecture and luxury streetwear enterprise founded by Kxrn Gupta under the parent umbrella of DuskyMoon Productions. Built for modern aesthetics requiring spatial web experiences, bespoke WebGL shaders, and fluid micro-interactions.',
+    description: 'An upcoming luxury clothing and contemporary streetwear brand (NoirWear) operating as a child enterprise under DuskyMoon Productions.',
+    longDescription: 'Noir Studio (NoirWear) is an upcoming luxury clothing and modern apparel brand operating as a child enterprise of DuskyMoon Productions. Focused on crafting high-end luxury streetwear, minimalist dark-palette silhouettes, and bespoke capsule drops.',
+    overview: 'Noir Studio (live in pre-launch at noirwear.in) is a luxury clothing and apparel enterprise founded by Kxrn Gupta under the parent umbrella of DuskyMoon Productions. Built around refined dark-luxury aesthetics, heavyweight fabrics, and limited-edition streetwear drops.',
     preLaunchUrl: 'https://www.noirwear.in',
     externalUrl: 'https://www.noirwear.in',
     ctaText: 'Visit Pre-Launch',
-    tags: ['Child Enterprise', 'NoirWear', 'React', 'Three.js', 'UI/UX Design', 'WebGL'],
-    icon: '✨',
+    tags: ['Luxury Clothing Brand', 'NoirWear', 'Streetwear', 'Child Enterprise', 'Apparel Design'],
+    icon: '🧥',
     accent: '#a855f7',
     featured: true,
     highlights: [
-      'Official child enterprise under parent organization DuskyMoon Productions (noirwear.in).',
-      'Hardware-accelerated 3D viewports utilizing Three.js and custom GLSL vertex/fragment shaders.',
-      'VisionOS-inspired glassmorphism with dynamic ambient lighting cones and zero CSS layout shifts.',
-      'Smooth inertial scrolling synchronization paired with Framer Motion exit/enter physics.'
+      'Official luxury clothing child enterprise under parent organization DuskyMoon Productions (noirwear.in).',
+      'Signature dark-luxury streetwear silhouettes, heavyweight textiles, and limited-edition capsule drops.',
+      'Minimalist monochrome & obsidian brand identity engineered for modern luxury fashion.',
+      'Direct-to-consumer pre-launch experience live at noirwear.in.'
     ],
     specs: {
       enterprise: 'Noir Studio (NoirWear)',
-      parentEntity: 'DuskyMoon Productions',
+      industry: 'Luxury Clothing & Streetwear',
+      parentEntity: 'DuskyMoon Productions (Production Hub)',
       founder: 'Kxrn Gupta (Karan Gupta)',
-      website: 'https://www.noirwear.in',
-      framework: 'React 18 / Three.js / Fiber'
+      website: 'https://www.noirwear.in'
     },
     timeline: [
       {
-        version: 'Design Lab',
+        version: 'Brand Atelier',
         date: '2026',
-        milestone: 'Architecture blueprints, GLSL shader prototypes, and component library developed.'
+        milestone: 'Capsule silhouettes, textile sourcing, and NoirWear luxury clothing identity established.'
       },
       {
         version: 'Pre-Launch',

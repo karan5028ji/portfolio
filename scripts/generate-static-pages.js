@@ -60,8 +60,8 @@ const pages = [
   },
   {
     route: 'projects/noir-studio',
-    title: 'Noir Studio (NoirWear) | Child Enterprise & 3D Design Brand | Kxrn',
-    description: 'Upcoming luxury brand and 3D WebGL design studio (noirwear.in) founded by Kxrn Gupta as a child enterprise under DuskyMoon Productions.',
+    title: 'Noir Studio (NoirWear) | Luxury Clothing Brand & Child Enterprise | Kxrn',
+    description: 'Upcoming luxury clothing and streetwear brand (noirwear.in) founded by Kxrn Gupta as a child enterprise under DuskyMoon Productions.',
     canonical: 'https://kxrn.is-a.dev/projects/noir-studio',
     image: 'https://kxrn.is-a.dev/kxrn-karan-gupta-music-producer.jpeg'
   },
