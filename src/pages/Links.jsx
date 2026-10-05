@@ -101,12 +101,6 @@ const linkGroups = [
         icon: '💿',
       },
       {
-        title: 'Harvard University Credential',
-        desc: 'CS50 AI with Python · Verified',
-        url: 'https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e',
-        icon: '🎓',
-      },
-      {
         title: 'Musixmatch Verified Artist',
         desc: 'Official Lyrics & Distribution Hub',
         url: 'https://www.musixmatch.com/artist/kxrn-gupta',

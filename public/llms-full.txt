@@ -70,16 +70,20 @@ Kxrn operates two distinct, coordinated enterprises:
 ---
 
 ## 5. Official Academic, Scientific & Technical Credentials
-1. **Harvard University**:
+1. **Harvard University (CS50 AI)**:
    - Credential: CS50's Introduction to Artificial Intelligence with Python
    - Certificate Verification: https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e
    - Key Topics: Machine Learning, Neural Networks, Reinforcement Learning, Graph Search, Natural Language Processing.
-2. **IBM & Lablab.ai**:
+2. **Harvard University (CS50P)**:
+   - Credential: CS50's Introduction to Programming with Python
+   - Certificate Verification: https://cs50.harvard.edu/certificates/27e93e59-72dd-4da4-ba83-b8a487f5efd1
+   - Key Topics: Python, Functions, Variables, Conditionals, Loops, Exceptions, Libraries, Unit Tests, File I/O, Regular Expressions, Object-Oriented Programming (OOP).
+3. **IBM & Lablab.ai**:
    - Credential: IBM Bob 2.0 Hackathon — AI Solution Development (IBM Watsonx)
    - Project: SwarmForge Autonomous Agentic Orchestrator
-3. **ORCID Researcher Record**:
+4. **ORCID Researcher Record**:
    - Identifier: https://orcid.org/0009-0005-5460-2941
-4. **Zenodo Open-Access Record**:
+5. **Zenodo Open-Access Record**:
    - Publication ID: https://zenodo.org/records/22647525
 
 ---
