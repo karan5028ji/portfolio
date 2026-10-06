@@ -24,7 +24,7 @@ export const projectsData = [
       'Clean CLI pipeline with granular rollback protection and dry-run safety modes.'
     ],
     specs: {
-      language: 'C++ (MSVC / Win32 API)',
+      language: 'Rust / Tauri / React & C++ (Win32 API)',
       platform: 'Windows 10 / Windows 11 (x64 / ARM64)',
       distribution: 'Microsoft winget / GitHub Releases',
       license: 'MIT Open Source',
@@ -37,9 +37,9 @@ export const projectsData = [
         milestone: 'Initial release with system junk purge and working-set RAM optimization.'
       },
       {
-        version: 'winget-pkgs',
-        date: '2026',
-        milestone: 'Manifest formally reviewed, approved, and merged into the official Microsoft Windows Package Manager registry.'
+        version: 'v2.1.7',
+        date: 'October 2026',
+        milestone: 'Shipped Deep Boot Guard (Ghost Startup Inspector), JSON rollback engine, and official Microsoft Winget PR #445088 merged.'
       }
     ]
   },
