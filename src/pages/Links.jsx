@@ -119,10 +119,10 @@ const linkGroups = [
         icon: '📄',
       },
       {
-        title: 'HackerNoon Tech Brief (Podcast)',
-        desc: 'Featured Podcast & Engineering Article',
-        url: 'https://hackernoon.com/u/kxrngupta',
-        icon: '🎙️',
+        title: 'HackerNoon Writers Spotlight',
+        desc: 'Behind the Code · Official Editorial Feature',
+        url: 'https://hackernoon.com/behind-the-code-how-a-19-year-old-music-producer-builds-zero-cost-ai-systems',
+        icon: '💚',
       },
       {
         title: 'IBM Bob 2.0 Hackathon Project',
