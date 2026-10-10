@@ -62,6 +62,29 @@ const linkGroups = [
     ],
   },
   {
+    groupTitle: 'DEVELOPER & STUDENT LABS',
+    items: [
+      {
+        title: 'Free $100 Azure Cloud',
+        desc: 'Claim Annual Student Cloud Compute (No CC)',
+        url: 'https://azure.microsoft.com/free/students?wt.mc_id=studentamb_664130',
+        icon: '🚀',
+      },
+      {
+        title: 'Microsoft Copilot Studio Sandbox',
+        desc: 'Interactive Lab to Build & Certify AI Agents',
+        url: 'https://learn.microsoft.com/credentials/applied-skills/build-an-agent-in-microsoft-copilot-studio/?wt.mc_id=studentamb_664130',
+        icon: '🤖',
+      },
+      {
+        title: 'Visual Studio Code & Cloud Tools',
+        desc: 'Modern Remote Containers & Extensions',
+        url: 'https://code.visualstudio.com/?wt.mc_id=studentamb_664130',
+        icon: '💻',
+      },
+    ],
+  },
+  {
     groupTitle: 'DATABASE & PRESS',
     items: [
       {
