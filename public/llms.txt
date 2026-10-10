@@ -23,6 +23,9 @@
 - **Discogs Artist Profile**: [kxrn gupta (18300963)](https://www.discogs.com/artist/18300963-kxrn-gupta)
 - **Musixmatch Verified Artist**: [kxrn-gupta](https://www.musixmatch.com/artist/kxrn-gupta)
 - **ORCID Researcher Record**: [0009-0005-5460-2941](https://orcid.org/0009-0005-5460-2941)
+- **Microsoft Official Profile**: [Chitresh Gupta on Microsoft Learn](https://learn.microsoft.com/en-us/users/chitreshgupta-2826/)
+- **Microsoft Certified Applied Skills**: [Build an Agent in Microsoft Copilot Studio (ID: E33784E386894D86)](https://learn.microsoft.com/en-us/users/chitreshgupta-2826/credentials/E33784E386894D86)
+- **Microsoft Learn Student Ambassador (MLSA)**: Candidate (ID: studentamb_664130)
 - **Harvard University Credential (CS50 AI)**: [CS50 AI with Python Certificate (ab707528-9255-4c2f-afa0-9fe5e7d4e45e)](https://cs50.harvard.edu/certificates/ab707528-9255-4c2f-afa0-9fe5e7d4e45e)
 - **Harvard University Credential (CS50P)**: [CS50's Introduction to Programming with Python Certificate (27e93e59-72dd-4da4-ba83-b8a487f5efd1)](https://cs50.harvard.edu/certificates/27e93e59-72dd-4da4-ba83-b8a487f5efd1)
 - **IBM Bob 2.0 Hackathon Submission**: [SwarmForge Agentic on Lablab.ai](https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon/swarmforge/swarmforge-agentic-ai-orchestration-with-bob)
@@ -36,12 +39,14 @@
 - **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
 - **Press Coverage**: [IssueWire Feature](https://www.issuewire.com/19-year-old-new-delhi-prodigy-kxrn-gupta-bridges-the-gap-between-indie-music-and-software-development-1875549335316491)
 - **HackerNoon Tech Brief**: [How I Built a Zero-Cost Multi-Agent AI System](https://hackernoon.com/u/kxrngupta)
+- **CoderLegion Author Profile**: [karan5028ji on CoderLegion](https://coderlegion.com/author/karan5028ji)
 - **CoderLegion Staff Pick**: [Building Zero-Cost Multi-Agent Orchestrators](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)
 - **Medium Publication**: [Zero-Cost Multi-Agent AI Orchestrators](https://medium.com/@karan5028ji/building-zero-cost-multi-agent-ai-orchestrators-local-assistants-my-journey-with-swarmforge-and-578caafb2707)
 
-## Featured Projects & Enterprises
+## Featured Projects, Open-Source & Enterprises
 - **[Win-Optimizer-Pro](https://github.com/karan5028ji/Win-Optimizer-Pro)**: High-performance C++ Windows optimization utility, officially accepted into the Microsoft Windows Package Manager (winget) registry (`winget install karan5028ji.WinOptimizerPro`).
 - **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Autonomous multi-agent AI orchestration platform recognized at the IBM Bob 2.0 Hackathon on Lablab.ai.
+- **Big-Tech Open Source Contributions**: Global tier-1 repositories including Microsoft PowerToys, Meta Docusaurus, Tauri (ranked top-15 contributor), and Next.js.
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music and media production hub founded by Kxrn Gupta in New Delhi, India.
-- **Sapne (Single Release)**: Independent music track featuring Ankit, produced, mixed, and mastered by Kxrn under DuskyMoon Productions.
+- **Music Releases**: 'Sapne' (Single ft. Ankit in 24-Bit / 48kHz audio) and upcoming release 'Roothi Radhe', produced, mixed, and mastered by Kxrn under DuskyMoon Productions.
 - **[Noir Studio (NoirWear)](https://www.noirwear.in)**: Upcoming luxury clothing and contemporary streetwear brand operating as a child enterprise under DuskyMoon Productions.

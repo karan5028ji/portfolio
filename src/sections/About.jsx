@@ -201,7 +201,7 @@ const About = () => {
             </div>
 
             <a
-              href="https://learn.microsoft.com/credentials/applied-skills/build-an-agent-in-microsoft-copilot-studio/?wt.mc_id=studentamb_664130"
+              href="https://learn.microsoft.com/en-us/users/chitreshgupta-2826/credentials/E33784E386894D86"
               target="_blank"
               rel="noopener noreferrer"
               className="credential-verify-btn"
