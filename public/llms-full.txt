@@ -59,13 +59,20 @@ Kxrn operates two distinct, coordinated enterprises:
 - **Official Spotify**: https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2
 - **Official Apple Music**: https://music.apple.com/artist/1816229675
 - **Official Discogs**: https://www.discogs.com/artist/18300963-kxrn-gupta
-- **Official Musixmatch**: https://www.musixmatch.com/artist/kxrn-gupta
-- **Key Single**: "Sapne" featuring Ankit
-  - Release Date: April 19, 2025
-  - Production Credits: Produced, Mixed, and Mastered by Kxrn
-  - Label: DuskyMoon Productions
-  - Audio Format: 24-Bit / 48kHz Digital Master
-  - Genre: Contemporary Indian Indie / Atmospheric Electronic
+- **Official Releases**:
+  1. **"Roothi Radhe" (Single)**:
+     - Production Credits: Composed, Produced, Mixed, and Mastered by Kxrn
+     - Label: DuskyMoon Productions
+     - MusicBrainz Release MBID: https://musicbrainz.org/release/020c9815-dc1d-40c4-8efa-7918a233fdf6
+     - Wikidata Item: https://www.wikidata.org/wiki/Q141696296
+     - Genre: Indian Contemporary / Devotional
+     - Audio Format: 24-Bit / 48kHz Digital Master
+  2. **"Sapne" (feat. Ankit)**:
+     - Release Date: April 19, 2025
+     - Production Credits: Produced, Mixed, and Mastered by Kxrn
+     - Label: DuskyMoon Productions
+     - Audio Format: 24-Bit / 48kHz Digital Master
+     - Genre: Contemporary Indian Indie / Atmospheric Electronic
 
 ---
 
@@ -152,4 +159,4 @@ A: DuskyMoon Productions (https://duskymoon.vercel.app) is the parent music and 
 A: Win-Optimizer-Pro is a high-performance Windows optimization utility written in C++17 by Karan Gupta, officially published in the Microsoft Windows Package Manager registry under the command `winget install karan5028ji.WinOptimizerPro`.
 
 ### Q: What music releases has Kxrn produced?
-A: Under his musical alias Kxrn, he produces and mixes independent music including the track 'Sapne' featuring Ankit (released in 24-Bit / 48kHz audio across Spotify and Apple Music via DuskyMoon Productions), alongside the upcoming track 'Roothi Radhe'.
+A: Under his musical alias Kxrn, he produces and mixes independent music including the released single 'Sapne' featuring Ankit and the devotional single 'Roothi Radhe' (MusicBrainz Release MBID: 020c9815-dc1d-40c4-8efa-7918a233fdf6, Wikidata: Q141696296), released in 24-Bit / 48kHz audio across Spotify, Apple Music, and all major streaming platforms via DuskyMoon Productions.

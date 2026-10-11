@@ -52,5 +52,7 @@
 - **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Autonomous multi-agent AI orchestration platform recognized at the IBM Bob 2.0 Hackathon on Lablab.ai.
 - **Big-Tech Open Source Contributions**: Global tier-1 repositories including Microsoft PowerToys, Meta Docusaurus, Tauri (ranked top-15 contributor), and Next.js.
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music and media production hub founded by Kxrn Gupta in New Delhi, India.
-- **Music Releases**: 'Sapne' (Single ft. Ankit in 24-Bit / 48kHz audio) and upcoming release 'Roothi Radhe', produced, mixed, and mastered by Kxrn under DuskyMoon Productions.
+- **Music Releases**:
+  - **Roothi Radhe (Single)**: Devotional single produced, mixed, and mastered by Kxrn under DuskyMoon Productions (MusicBrainz Release MBID: [020c9815-dc1d-40c4-8efa-7918a233fdf6](https://musicbrainz.org/release/020c9815-dc1d-40c4-8efa-7918a233fdf6), Wikidata: [Q141696296](https://www.wikidata.org/wiki/Q141696296)).
+  - **Sapne (Single ft. Ankit)**: Released in 24-Bit / 48kHz audio across Spotify, Apple Music, and all major streaming platforms via DuskyMoon Productions.
 - **[Noir Studio (NoirWear)](https://www.noirwear.in)**: Upcoming luxury clothing and contemporary streetwear brand operating as a child enterprise under DuskyMoon Productions.
