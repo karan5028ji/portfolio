@@ -2,7 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projectsData } from '../data/projectsData';
 import { navigate } from '../utils/navigate';
+import {
+  LightningIcon,
+  CrescentMoonIcon,
+  SwarmAgentIcon,
+  SyncDatabaseIcon,
+  LuxuryAtelierIcon,
+  MusicSingleIcon
+} from '../components/TechIcons';
 import './Projects.css';
+
+const renderProjectIcon = (project, size = 24) => {
+  if (!project) return null;
+  switch (project.id) {
+    case 'win-optimizer-pro':
+      return <LightningIcon size={size} />;
+    case 'duskymoon-productions':
+      return <CrescentMoonIcon size={size} />;
+    case 'swarmforge':
+      return <SwarmAgentIcon size={size} />;
+    case 'tauri-plugin-sync':
+      return <SyncDatabaseIcon size={size} />;
+    case 'noir-studio':
+      return <LuxuryAtelierIcon size={size} />;
+    case 'sapne':
+    case 'roothi-radhe':
+    default:
+      return <MusicSingleIcon size={size} />;
+  }
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 35 },
@@ -102,7 +130,6 @@ const Projects = () => {
           viewport={{ once: true, margin: '-80px' }}
           variants={fadeInUp}
         >
-          <span className="section-label">Work</span>
           <h2>Featured <span className="gradient-text">Projects</span></h2>
         </motion.div>
         
@@ -126,8 +153,7 @@ const Projects = () => {
                 >
                   <div className="project-card-accent" />
                   <div className="project-header">
-                    <span className="project-icon">{project.icon}</span>
-                    <span className="project-number">0{index + 1}</span>
+                    <span className="project-icon">{renderProjectIcon(project, 26)}</span>
                   </div>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-subtitle">{project.subtitle}</p>
@@ -137,7 +163,7 @@ const Projects = () => {
                     <div className="terminal-install-block" onClick={(e) => e.stopPropagation()}>
                       <p className="terminal-label">Install via Terminal:</p>
                       <div className="terminal-box">
-                        <span className="terminal-cmd"><span>$</span> {project.command}</span>
+                        <code className="terminal-cmd"><span>$</span> {project.command}</code>
                         <button 
                           className="terminal-copy-btn"
                           onClick={(e) => handleCopy(project.command, project.id, e)}
@@ -271,9 +297,12 @@ const Projects = () => {
                 onClick={() => setSelected(null)}
                 aria-label="Close project details modal"
               >
-                ✕
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
               </button>
-              <div className="modal-icon">{selected.icon}</div>
+              <div className="modal-icon">{renderProjectIcon(selected, 36)}</div>
               <h3 id={`project-modal-title-${selected.id}`} className="modal-title">{selected.title}</h3>
               <p className="modal-subtitle">{selected.subtitle}</p>
               <p className="modal-desc">{selected.longDescription}</p>
@@ -282,7 +311,7 @@ const Projects = () => {
                 <div className="terminal-install-block" style={{ marginBottom: '24px' }}>
                   <p className="terminal-label">Install via Terminal:</p>
                   <div className="terminal-box">
-                    <span className="terminal-cmd"><span>$</span> {selected.command}</span>
+                    <code className="terminal-cmd"><span>$</span> {selected.command}</code>
                     <button 
                       className="terminal-copy-btn"
                       onClick={(e) => handleCopy(selected.command, `modal-${selected.id}`, e)}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigate } from '../utils/navigate';
+import { CrescentMoonIcon } from './TechIcons';
 import './Footer.css';
 
 const Footer = () => {
@@ -43,7 +44,10 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <p className="copyright-text">&copy; 2026 DuskyMoon Productions. All rights reserved. Founded by Kxrn (Karan Gupta / Chitresh Gupta).</p>
-          <p className="footer-label">🌙 DuskyMoon Productions</p>
+          <p className="footer-label">
+            <CrescentMoonIcon size={14} className="footer-moon-icon" />
+            <span>DuskyMoon Productions</span>
+          </p>
         </div>
       </div>
     </footer>

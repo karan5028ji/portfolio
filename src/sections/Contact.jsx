@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import {
+  HeadphonesAudioIcon,
+  CameraInstagramIcon,
+  CodeBracketIcon,
+  MusicSingleIcon,
+  GlobeNetworkIcon,
+  MailIcon,
+  PinLocationIcon
+} from '../components/TechIcons';
 import './Contact.css';
 
 const fadeInUp = {
@@ -16,42 +25,42 @@ const socialPlatforms = [
   {
     name: 'Spotify',
     desc: 'Official Artist Profile (Alias: Kxrn)',
-    icon: '🎧',
+    Icon: HeadphonesAudioIcon,
     url: 'https://open.spotify.com/artist/57sDiEfeHnIZX2g7gvPBR2',
     color: '#1db954',
   },
   {
     name: 'Instagram',
     desc: '@kxrn_gupta · DuskyMoon & Aesthetics',
-    icon: '📸',
+    Icon: CameraInstagramIcon,
     url: 'https://www.instagram.com/kxrn_gupta/',
     color: '#e1306c',
   },
   {
     name: 'GitHub',
     desc: 'Software Engineering & Dev Projects',
-    icon: '💻',
+    Icon: CodeBracketIcon,
     url: 'https://github.com/karan5028ji',
     color: '#00c2ff',
   },
   {
     name: 'MusicBrainz',
     desc: 'Official Music Producer Entry',
-    icon: '🎵',
+    Icon: MusicSingleIcon,
     url: 'https://musicbrainz.org/artist/efbc6b4f-363b-4bbd-a5db-f4d4e8817607',
     color: '#ba478f',
   },
   {
     name: 'Wikidata',
     desc: 'Official Entity Page (Q141046426)',
-    icon: '🌐',
+    Icon: GlobeNetworkIcon,
     url: 'https://www.wikidata.org/wiki/Q141046426',
     color: '#006699',
   },
   {
     name: 'Google Knowledge Panel',
     desc: 'Official Google Entity Node',
-    icon: '🌐',
+    Icon: GlobeNetworkIcon,
     url: 'https://share.google/5AfjCZgxu7EtcNFup',
     color: '#4285F4',
   },
@@ -220,7 +229,6 @@ const Contact = () => {
           viewport={{ once: true, margin: '-80px' }}
           variants={fadeInUp}
         >
-          <span className="section-label">Get In Touch</span>
           <h2>Let's <span className="gradient-text">Connect</span></h2>
         </motion.div>
         <div className="contact-grid">
@@ -344,14 +352,14 @@ const Contact = () => {
           >
             <div className="direct-meta-box glass-card">
               <div className="meta-item">
-                <span className="meta-icon">✉️</span>
+                <span className="meta-icon"><MailIcon size={18} /></span>
                 <div>
                   <span className="meta-label">Email</span>
                   <a href="mailto:Karan5028ji@gmail.com" className="meta-val">Karan5028ji@gmail.com</a>
                 </div>
               </div>
               <div className="meta-item">
-                <span className="meta-icon">📍</span>
+                <span className="meta-icon"><PinLocationIcon size={18} /></span>
                 <div>
                   <span className="meta-label">Location</span>
                   <span className="meta-val">New Delhi, India</span>
@@ -362,22 +370,27 @@ const Contact = () => {
             <h3 className="social-heading">Platforms &amp; Socials</h3>
             <p className="social-subtext">Connect across development, music releases, and creative media.</p>
             <div className="social-3d-grid">
-              {socialPlatforms.map((platform) => (
-                <a
-                  key={platform.name}
-                  href={platform.url}
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                  className="social-3d-card glass-card"
-                  style={{ '--platform-accent': platform.color }}
-                >
-                  <div className="social-3d-icon">{platform.icon}</div>
-                  <div className="social-3d-info">
-                    <span className="social-3d-name">{platform.name}</span>
-                    <span className="social-3d-desc">{platform.desc}</span>
-                  </div>
-                </a>
-              ))}
+              {socialPlatforms.map((platform) => {
+                const IconComponent = platform.Icon;
+                return (
+                  <a
+                    key={platform.name}
+                    href={platform.url}
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    className="social-3d-card glass-card"
+                    style={{ '--platform-accent': platform.color }}
+                  >
+                    <div className="social-3d-icon">
+                      <IconComponent size={20} />
+                    </div>
+                    <div className="social-3d-info">
+                      <span className="social-3d-name">{platform.name}</span>
+                      <span className="social-3d-desc">{platform.desc}</span>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </motion.div>
         </div>

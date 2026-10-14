@@ -1,5 +1,5 @@
 .project-detail-page {
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg-primary, #08080d);
   color: var(--text-primary, #ffffff);
   position: relative;

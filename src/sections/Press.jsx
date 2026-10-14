@@ -1,7 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { pressData } from '../data/pressData';
+import {
+  GlobeNetworkIcon,
+  NewspaperIcon,
+  DeviceMobileIcon,
+  CodeBracketIcon,
+  LightningIcon,
+  PenEditorialIcon
+} from '../components/TechIcons';
 import './Press.css';
+
+const renderPressIcon = (item, size = 20) => {
+  if (!item) return null;
+  switch (item.id) {
+    case 'techyorker-feature':
+      return <GlobeNetworkIcon size={size} />;
+    case 'issuewire-prodigy':
+      return <NewspaperIcon size={size} />;
+    case 'mobilestalk-feature':
+      return <DeviceMobileIcon size={size} />;
+    case 'hackernoon-interview-spotlight':
+    case 'geekchamp-feature':
+      return <CodeBracketIcon size={size} />;
+    case 'coderlegion-staff-pick':
+    case 'itechguides-feature':
+      return <LightningIcon size={size} />;
+    case 'medium-zero-cost-ai':
+    default:
+      return <PenEditorialIcon size={size} />;
+  }
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 35 },
@@ -69,7 +98,6 @@ const Press = () => {
           viewport={{ once: true, margin: '-80px' }}
           variants={fadeInUp}
         >
-          <span className="section-label">Media &amp; Publications</span>
           <h2>Featured <span className="gradient-text">In</span></h2>
         </motion.div>
         
@@ -96,10 +124,9 @@ const Press = () => {
                   
                   <div className="press-header">
                     <div className="press-brand">
-                      <span className="press-icon">{item.icon}</span>
+                      <span className="press-icon">{renderPressIcon(item, 20)}</span>
                       <div>
                         <span className="press-source">{item.source}</span>
-                        <span className="press-index">0{index + 1}</span>
                       </div>
                     </div>
                     <span className="press-badge">{item.badge}</span>
@@ -198,11 +225,14 @@ const Press = () => {
                   onClick={() => setSelected(null)}
                   aria-label="Close modal"
                 >
-                  ✕
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
                 </button>
                 <div className="modal-header">
                   <div className="modal-brand">
-                    <span className="modal-icon">{selected.icon}</span>
+                    <span className="modal-icon">{renderPressIcon(selected, 26)}</span>
                     <div>
                       <span className="modal-source">{selected.source}</span>
                       <span className="modal-category">{selected.category}</span>

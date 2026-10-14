@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { HeadphonesAudioIcon, RocketLaunchIcon, AcademicCapIcon, RobotAgentIcon, RustTauriIcon } from '../components/TechIcons';
 import './About.css';
 
 const fadeInUp = {
@@ -22,7 +23,6 @@ const About = () => {
           viewport={{ once: true, margin: '-80px' }}
           variants={fadeInUp}
         >
-          <span className="section-label">About</span>
           <h2>Bridging <span className="gradient-text">Code &amp; Sound</span></h2>
         </motion.div>
         <div className="about-grid">
@@ -69,7 +69,7 @@ const About = () => {
             <div className="persona-dissolve-overlay" />
             <div className="persona-glow" />
             <div className="persona-content">
-              <div className="persona-icon">🎧</div>
+              <div className="persona-icon"><HeadphonesAudioIcon size={32} /></div>
               <div className="persona-badge">Creative &amp; Leadership Persona</div>
               <h3 className="persona-name">
                 Stage Name: <span className="gradient-text">Kxrn</span>
@@ -79,7 +79,7 @@ const About = () => {
               </p>
               <div className="persona-divider" />
               <div className="persona-role">
-                <span className="role-icon">🚀</span>
+                <span className="role-icon"><RocketLaunchIcon size={20} /></span>
                 <div>
                   <strong>CEO &amp; Founder</strong>
                   <span>DuskyMoon Productions</span>
@@ -103,7 +103,7 @@ const About = () => {
             variants={fadeInUp}
           >
             <div className="credential-left">
-              <div className="credential-icon-badge">🎓</div>
+              <div className="credential-icon-badge"><AcademicCapIcon size={20} /></div>
               <div className="credential-details">
                 <div className="credential-title-row">
                   <span className="credential-inst">Harvard University</span>
@@ -143,7 +143,7 @@ const About = () => {
             variants={fadeInUp}
           >
             <div className="credential-left">
-              <div className="credential-icon-badge">🎓</div>
+              <div className="credential-icon-badge"><AcademicCapIcon size={20} /></div>
               <div className="credential-details">
                 <div className="credential-title-row">
                   <span className="credential-inst">Harvard University</span>
@@ -183,7 +183,7 @@ const About = () => {
             variants={fadeInUp}
           >
             <div className="credential-left">
-              <div className="credential-icon-badge">🤖</div>
+              <div className="credential-icon-badge"><RobotAgentIcon size={20} /></div>
               <div className="credential-details">
                 <div className="credential-title-row">
                   <span className="credential-inst">Microsoft</span>
@@ -223,7 +223,7 @@ const About = () => {
             variants={fadeInUp}
           >
             <div className="credential-left">
-              <div className="credential-icon-badge">🦀</div>
+              <div className="credential-icon-badge"><RustTauriIcon size={20} /></div>
               <div className="credential-details">
                 <div className="credential-title-row">
                   <span className="credential-inst">Tauri Core &amp; Microsoft</span>

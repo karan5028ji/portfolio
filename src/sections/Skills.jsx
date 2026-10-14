@@ -32,7 +32,7 @@ const primarySkills = [
     Icon: ThreejsIcon,
     tag: 'Spatial Experience',
     desc: 'Custom GLSL shaders, Three.js spatial viewports, particle physics, and hardware-accelerated canvas.',
-    accent: '#818cf8',
+    accent: '#38bdf8',
   },
   {
     name: 'Modern Web Architecture',
@@ -113,7 +113,6 @@ const Skills = () => {
           viewport={{ once: true, margin: '-80px' }}
           variants={fadeInUp}
         >
-          <span className="section-label">Engineering Stack</span>
           <h2>Technical &amp; <span className="gradient-text">Sonic Craft</span></h2>
         </motion.div>
         
@@ -156,7 +155,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <div className="marquee-label">✦ Production Tooling, Audio Engines &amp; Workflows</div>
+          <div className="marquee-label">Production Tooling, Audio Engines &amp; Workflows</div>
           <div className="marquee-container">
             <div className="marquee-track">
               {[...secondarySkills, ...secondarySkills].map((skill, i) => (

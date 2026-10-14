@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { navigate } from '../utils/navigate';
+import { GlobeNetworkIcon, WindowsIcon, CheckMarkIcon, LightningIcon, HeadphonesAudioIcon } from '../components/TechIcons';
 import './Hero.css';
 
 const Hero = () => {
@@ -17,20 +18,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Live Pulsing Beacon Status Pill */}
-          <motion.div
-            className="hero-status-pill"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            <span className="pulse-beacon">
-              <span className="pulse-beacon-ping" />
-              <span className="pulse-beacon-dot" />
-            </span>
-            <span className="status-text">Available for Collaboration · New Delhi, IN</span>
-          </motion.div>
-
           <h1 className="hero-title">
             Software Developer<br />
             <span className="gradient-text">&amp; Entrepreneur</span>
@@ -85,27 +72,35 @@ const Hero = () => {
             transition={{ delay: 0.75, duration: 0.8 }}
           >
             <div className="proof-pill">
-              <span className="proof-icon">🌍</span>
+              <span className="pulse-beacon" style={{ display: 'inline-flex', width: 8, height: 8, marginRight: 2 }}>
+                <span className="pulse-beacon-ping" />
+                <span className="pulse-beacon-dot" />
+              </span>
+              <span>Available for Collaboration · New Delhi</span>
+            </div>
+            <div className="proof-divider" />
+            <div className="proof-pill">
+              <GlobeNetworkIcon size={14} className="proof-icon" />
               <span>Rank #6 Worldwide (Tauri Plugins)</span>
             </div>
             <div className="proof-divider" />
             <div className="proof-pill">
-              <span className="proof-icon">🪟</span>
+              <WindowsIcon size={14} className="proof-icon" />
               <span>Microsoft PowerToys Merged</span>
             </div>
             <div className="proof-divider" />
             <div className="proof-pill">
-              <span className="proof-check">✓</span>
+              <CheckMarkIcon size={14} className="proof-check" />
               <span>winget Package Author</span>
             </div>
             <div className="proof-divider" />
             <div className="proof-pill">
-              <span className="proof-icon">⚡</span>
+              <LightningIcon size={14} className="proof-icon" />
               <span>Staff Pick (CoderLegion)</span>
             </div>
             <div className="proof-divider" />
             <div className="proof-pill">
-              <span className="proof-icon">🎧</span>
+              <HeadphonesAudioIcon size={14} className="proof-icon" />
               <span>Spotify Verified</span>
             </div>
           </motion.div>

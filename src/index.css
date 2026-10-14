@@ -13,26 +13,26 @@
 
   /* Text — Standardized Accessible Palette (Consolidated to <=5 tokens) */
   --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
-  /* Accents — Refined Cyber & Luxury Slate */
+  /* Accents — Refined Cyber & Titanium */
   --accent-blue: #38bdf8;
   --accent-purple: #818cf8;
   --accent-pink: #f472b6;
-  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  --accent-gradient: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
   --accent-glow-blue: rgba(56, 189, 248, 0.15);
   --accent-glow-purple: rgba(129, 140, 248, 0.15);
 
-  /* Glass */
-  --glass-bg: rgba(12, 12, 22, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* Glass & Double-Bezel Surfaces */
+  --glass-bg: #0c0d16;
+  --glass-border: rgba(255, 255, 255, 0.08);
   --glass-border-hover: rgba(56, 189, 248, 0.35);
 
   /* Standardized Modular Type Scale (Strict <= 8 sizes) */
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --text-xs: 0.8125rem;  /* 13px (enforces >= 12px min body rule) */
+  --text-xs: 0.8125rem;  /* 13px */
   --text-sm: 0.875rem;   /* 14px */
   --text-base: 1rem;     /* 16px */
   --text-md: 1.125rem;   /* 18px */
@@ -41,7 +41,7 @@
   --text-2xl: 2rem;      /* 32px */
   --text-3xl: 2.75rem;   /* 44px */
 
-  /* Standardized Corner Radii System (Consolidated to <= 4 tokens) */
+  /* Standardized Corner Radii System */
   --radius-sm: 8px;      /* inputs, micro badges, buttons */
   --radius-md: 14px;     /* cards, bento boxes */
   --radius-lg: 20px;     /* modals, hero containers */
@@ -206,59 +206,54 @@ p {
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: 0.5px;
-  transition: all var(--transition-medium);
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
   position: relative;
   overflow: hidden;
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
-  color: #fff;
-  box-shadow: 0 4px 30px rgba(0, 194, 255, 0.2);
+  background: #ffffff;
+  color: #08080d;
+  font-weight: 600;
+  border: 1px solid #ffffff;
 }
 
 .btn-primary:hover {
+  background: #e2e8f0;
+  border-color: #e2e8f0;
+  color: #08080d;
   transform: translateY(-2px);
-  box-shadow: 0 8px 40px rgba(0, 194, 255, 0.35);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-primary);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .btn-secondary:hover {
   border-color: var(--accent-blue);
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(56, 189, 248, 0.08);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px var(--accent-glow-blue);
 }
 
-/* ---------- Glass Card ---------- */
+/* ---------- Double-Bezel Card Architecture ---------- */
 .glass-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  background: #0d0e17;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  transition: all var(--transition-medium);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .glass-card:hover {
-  background: var(--bg-card-hover);
+  background: #121420;
   border-color: var(--glass-border-hover);
 }
 
-/* ---------- Gradient Text Utility ---------- */
+/* ---------- Solid Editorial Headline Sheen ---------- */
 .gradient-text {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 /* ---------- Screen Reader & SEO Bot Hidden Utility ---------- */

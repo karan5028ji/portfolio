@@ -28,3 +28,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Taste-Skill temp outputs & agent skills
+.taste-skill
+.agents/
+skills-lock.json
+

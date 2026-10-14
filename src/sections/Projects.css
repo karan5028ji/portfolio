@@ -79,19 +79,17 @@
   position: relative;
   z-index: 6;
   overflow: hidden;
-  background: rgba(12, 12, 22, 0.94);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d0e17;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   will-change: transform;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--glass-border-hover);
+  background: #121420;
   border-color: rgba(56, 189, 248, 0.4);
 }
 
@@ -144,7 +142,7 @@
 }
 
 .project-desc {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 20px;
@@ -203,16 +201,15 @@
 }
 
 .project-cta--prelaunch {
-  color: #e9d5ff !important;
-  background: rgba(168, 85, 247, 0.14) !important;
-  border: 1px solid rgba(168, 85, 247, 0.45) !important;
+  color: #f1f5f9 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .project-cta--prelaunch:hover {
-  background: rgba(168, 85, 247, 0.28) !important;
-  border-color: #c084fc !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
   color: #ffffff !important;
-  box-shadow: 0 0 18px rgba(168, 85, 247, 0.35);
 }
 
 /* ==========================================================================
@@ -241,18 +238,18 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 10px 14px;
   border-radius: var(--radius-sm);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.82rem;
   overflow-x: auto;
   gap: 12px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.25s ease;
 }
 
 .terminal-box:hover {
   border-color: rgba(56, 189, 248, 0.4);
 }
 
-.terminal-cmd {
+code.terminal-cmd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88rem;
   color: #4ade80;
   white-space: nowrap;
 }
@@ -312,24 +309,21 @@
   gap: 10px;
   padding: 13px 30px;
   border-radius: var(--radius-full);
-  background: rgba(14, 14, 24, 0.94);
+  background: #0d0e17;
   border: 1px solid rgba(56, 189, 248, 0.35);
   color: #ffffff;
   font-weight: 600;
   font-size: var(--text-sm);
   text-decoration: none;
   cursor: pointer;
-  backdrop-filter: blur(16px);
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
   font-family: inherit;
 }
 
 .btn-show-more:hover {
-  background: rgba(26, 26, 42, 0.98);
+  background: #141624;
   border-color: var(--accent-blue);
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(56, 189, 248, 0.22);
   color: var(--accent-blue);
 }
 
@@ -340,13 +334,12 @@
   padding: 13px 26px;
   border-radius: var(--radius-full);
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text-secondary);
   font-weight: 600;
   font-size: var(--text-sm);
   text-decoration: none;
-  backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   font-family: inherit;
 }
 
