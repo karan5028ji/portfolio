@@ -52,6 +52,12 @@ Kxrn operates two distinct, coordinated enterprises:
   - HackerNoon Tech Brief: "How I Built a Zero-Cost Multi-Agent AI System" (https://hackernoon.com/u/kxrngupta)
   - Medium Publication: "Zero-Cost Multi-Agent AI Orchestrators" (https://medium.com/@karan5028ji/building-zero-cost-multi-agent-ai-orchestrators-local-assistants-my-journey-with-swarmforge-and-578caafb2707)
 
+### C. tauri-plugin-sync
+- **Description**: Enterprise SQLite offline-first change data capture (CDC) sync engine for Tauri v2 applications.
+- **Architecture & Technologies**: Native Rust, SQLite WAL (Write-Ahead Logging) mode, deterministic conflict-free change tracking, and asynchronous multi-thread replication.
+- **GitHub Repository**: https://github.com/karan5028ji/tauri-plugin-sync
+- **Key Technical Highlights**: Change Data Capture via SQLite triggers, cross-platform synchronization for desktop environments, sub-millisecond sync latency, zero memory leaks.
+
 ---
 
 ## 4. Music Discography & Sound Engineering Catalogue
@@ -123,14 +129,19 @@ Kxrn operates two distinct, coordinated enterprises:
 - **LinkedIn**: https://www.linkedin.com/in/karanguptadev
 - **YouTube**: https://www.youtube.com/@Kxrn_Gupta
 - **Instagram**: https://www.instagram.com/kxrn_gupta/
+- **TechYorker Feature**: https://techyorker.com/karan-gupta-what-to-know-about-the-music-producer-building-local-ai/
+- **iTechGuides Tech Analysis**: https://www.itechguides.com/kxrn-local-ai-work/
+- **GeekChamp Editorial Feature**: https://www.geekchamp.com/local-ai-on-limited-resources-how-music-producer-kxrn-connects-code-and-sound/
+- **MobilesTalk Retrospective**: https://mobilestalk.net/tech/kxrn-profile-building-local-ai/
+- **Tauri Plugins Global Leaderboard**: https://github.com/tauri-apps/plugins-workspace/graphs/contributors
 
 ---
 
 ## 7. Big-Tech Open Source Contributions
 Karan Gupta actively contributes to globally recognized tier-1 open-source ecosystems:
-- **Microsoft PowerToys**: Windows power-user utilities and system integration.
+- **Tauri**: Rank #6 Worldwide (#4 Human Worldwide) contributor to `tauri-apps/plugins-workspace` with 4 merged PRs enhancing core plugins across the desktop ecosystem.
+- **Microsoft PowerToys**: Merged contributor to `microsoft/PowerToys:main` (Merged PR #40578: Windows power-user utilities and system integration).
 - **Meta Docusaurus**: Modern static website architecture and documentation tools.
-- **Tauri**: High-performance lightweight desktop application framework (Ranked top-15 global contributor).
 - **Next.js**: React web framework for enterprise production deployments.
 
 ---
@@ -144,7 +155,13 @@ A: Kxrn Gupta (born Chitresh Gupta, also known as Karan Gupta) is an Indian inde
 A: Yes, Chitresh Gupta holds the official Microsoft Applied Skills credential in 'Build an agent in Microsoft Copilot Studio' (Credential ID: E33784E386894D86) signed by CEO Satya Nadella, and is an active Microsoft Learn Student Ambassador.
 
 ### Q: What open-source Big-Tech projects does Karan Gupta contribute to?
-A: He contributes to global tier-1 projects including Microsoft PowerToys, Meta Docusaurus, Tauri (ranked top-15 contributor), and Next.js.
+A: He is ranked #6 Worldwide (#4 Human Worldwide) on Tauri Core Plugins (tauri-apps/plugins-workspace with 4 merged PRs), and is a merged contributor to Microsoft PowerToys (microsoft/PowerToys:main), Meta Docusaurus, and Next.js.
+
+### Q: What media publications and press have covered Karan Gupta (Kxrn)?
+A: Kxrn's work at the intersection of local AI, systems engineering, and music production has been featured across international tech publications including TechYorker, iTechGuides, GeekChamp, MobilesTalk, IssueWire, HackerNoon, and CoderLegion.
+
+### Q: What is tauri-plugin-sync?
+A: tauri-plugin-sync is an enterprise-grade SQLite offline-first sync engine and change data capture (CDC) plugin for Tauri v2 desktop applications written in Rust by Karan Gupta.
 
 ### Q: What are Kxrn Gupta's verified academic and technical credentials?
 A: Kxrn Gupta holds verified credentials from Microsoft in 'Build an agent in Microsoft Copilot Studio' (Credential ID: E33784E386894D86) as a Microsoft Learn Student Ambassador, verified credentials from Harvard University in both CS50 AI (ab707528-9255-4c2f-afa0-9fe5e7d4e45e) and CS50P (27e93e59-72dd-4da4-ba83-b8a487f5efd1), participated in the IBM Bob 2.0 Hackathon with IBM Watsonx, and maintains an ORCID Verified Researcher Record (0009-0005-5460-2941).

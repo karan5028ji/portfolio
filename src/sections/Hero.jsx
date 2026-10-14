@@ -85,6 +85,16 @@ const Hero = () => {
             transition={{ delay: 0.75, duration: 0.8 }}
           >
             <div className="proof-pill">
+              <span className="proof-icon">🌍</span>
+              <span>Rank #6 Worldwide (Tauri Plugins)</span>
+            </div>
+            <div className="proof-divider" />
+            <div className="proof-pill">
+              <span className="proof-icon">🪟</span>
+              <span>Microsoft PowerToys Merged</span>
+            </div>
+            <div className="proof-divider" />
+            <div className="proof-pill">
               <span className="proof-check">✓</span>
               <span>winget Package Author</span>
             </div>
@@ -92,11 +102,6 @@ const Hero = () => {
             <div className="proof-pill">
               <span className="proof-icon">⚡</span>
               <span>Staff Pick (CoderLegion)</span>
-            </div>
-            <div className="proof-divider" />
-            <div className="proof-pill">
-              <span className="proof-icon">🎙️</span>
-              <span>HackerNoon Tech Brief</span>
             </div>
             <div className="proof-divider" />
             <div className="proof-pill">

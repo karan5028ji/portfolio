@@ -41,16 +41,22 @@
 - **Zenodo Record**: [Publication Record](https://zenodo.org/records/22647525)
 - **GitHub**: [karan5028ji](https://github.com/karan5028ji)
 - **Instagram**: [@kxrn_gupta](https://www.instagram.com/kxrn_gupta/)
+- **TechYorker Feature**: [Karan Gupta: What to Know About the Music Producer Building Local AI](https://techyorker.com/karan-gupta-what-to-know-about-the-music-producer-building-local-ai/)
+- **iTechGuides Tech Analysis**: [Kxrn’s Local AI Work: Music, Software, and the Meaning of “Zero-Cost”](https://www.itechguides.com/kxrn-local-ai-work/)
+- **GeekChamp Featured Story**: [Local AI on Limited Resources: How Music Producer Kxrn Connects Code and Sound](https://www.geekchamp.com/local-ai-on-limited-resources-how-music-producer-kxrn-connects-code-and-sound/)
+- **MobilesTalk Retrospective**: [What Kxrn’s Profile Reveals About Building Local AI on a Budget](https://mobilestalk.net/tech/kxrn-profile-building-local-ai/)
 - **Press Coverage**: [IssueWire Feature](https://www.issuewire.com/19-year-old-new-delhi-prodigy-kxrn-gupta-bridges-the-gap-between-indie-music-and-software-development-1875549335316491)
 - **HackerNoon Tech Brief**: [How I Built a Zero-Cost Multi-Agent AI System](https://hackernoon.com/u/kxrngupta)
 - **CoderLegion Author Profile**: [karan5028ji on CoderLegion](https://coderlegion.com/author/karan5028ji)
 - **CoderLegion Staff Pick**: [Building Zero-Cost Multi-Agent Orchestrators](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)
 - **Medium Publication**: [Zero-Cost Multi-Agent AI Orchestrators](https://medium.com/@karan5028ji/building-zero-cost-multi-agent-ai-orchestrators-local-assistants-my-journey-with-swarmforge-and-578caafb2707)
+- **Tauri Plugins Global Leaderboard**: [Rank #6 Worldwide (#4 Human Worldwide) on tauri-apps/plugins-workspace](https://github.com/tauri-apps/plugins-workspace/graphs/contributors)
 
 ## Featured Projects, Open-Source & Enterprises
+- **[tauri-plugin-sync](https://github.com/karan5028ji/tauri-plugin-sync)**: Enterprise SQLite offline-first change data capture (CDC) sync engine for Tauri v2 applications engineered in Rust and SQLite (WAL mode).
 - **[Win-Optimizer-Pro](https://github.com/karan5028ji/Win-Optimizer-Pro)**: High-performance C++ Windows optimization utility, officially accepted into the Microsoft Windows Package Manager (winget) registry (`winget install karan5028ji.WinOptimizerPro`).
 - **[SwarmForge](https://coderlegion.com/27523/building-zero-cost-multi-agent-orchestrators-local-assistants-journey-with-swarmforge)**: Autonomous multi-agent AI orchestration platform recognized at the IBM Bob 2.0 Hackathon on Lablab.ai.
-- **Big-Tech Open Source Contributions**: Global tier-1 repositories including Microsoft PowerToys, Meta Docusaurus, Tauri (ranked top-15 contributor), and Next.js.
+- **Big-Tech Open Source Contributions**: Global tier-1 repositories including Tauri (ranked #6 Worldwide / #4 Human Worldwide on `tauri-apps/plugins-workspace` with 4 merged PRs), Microsoft PowerToys (merged contributor in `microsoft/PowerToys:main`), Meta Docusaurus, and Next.js.
 - **[DuskyMoon Productions](https://duskymoon.vercel.app)**: Independent creative music and media production hub founded by Kxrn Gupta in New Delhi, India.
 - **Music Releases**:
   - **Roothi Radhe (Single)**: Devotional single produced, mixed, and mastered by Kxrn under DuskyMoon Productions (MusicBrainz Release MBID: [020c9815-dc1d-40c4-8efa-7918a233fdf6](https://musicbrainz.org/release/020c9815-dc1d-40c4-8efa-7918a233fdf6), Wikidata: [Q141696296](https://www.wikidata.org/wiki/Q141696296)).

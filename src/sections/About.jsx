@@ -213,6 +213,45 @@ const About = () => {
               </svg>
             </a>
           </motion.div>
+
+          <motion.div
+            className="harvard-credential-card glass-card"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            custom={0.5}
+            variants={fadeInUp}
+          >
+            <div className="credential-left">
+              <div className="credential-icon-badge">🦀</div>
+              <div className="credential-details">
+                <div className="credential-title-row">
+                  <span className="credential-inst">Tauri Core &amp; Microsoft</span>
+                  <span className="credential-bullet">·</span>
+                  <span className="credential-verified-pill">
+                    <span className="status-dot" />
+                    Verified Contributor
+                  </span>
+                </div>
+                <h3 className="credential-title">Rank #6 Worldwide Contributor · Tauri Plugins Workspace</h3>
+                <p className="credential-subtext">
+                  Officially merged into Microsoft PowerToys (microsoft/PowerToys:main) &amp; 4 merged contributions in tauri-apps/plugins-workspace.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://github.com/tauri-apps/plugins-workspace/graphs/contributors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="credential-verify-btn"
+            >
+              <span>Verify</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

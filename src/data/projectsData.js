@@ -44,6 +44,51 @@ export const projectsData = [
     ]
   },
   {
+    id: 'tauri-plugin-sync',
+    title: 'tauri-plugin-sync',
+    subtitle: 'Enterprise Local-First SQLite Sync Engine for Tauri v2',
+    category: 'System & Utility',
+    role: 'Author & Core Architect (Karan Gupta)',
+    statusBadge: 'Official Tauri v2 Plugin Standard',
+    description: 'A high-performance, local-first SQLite synchronization engine for Tauri v2 desktop apps with Change Data Capture (CDC) and Rust Builder API.',
+    longDescription: 'tauri-plugin-sync is an enterprise-grade, local-first SQLite synchronization engine built specifically for Tauri v2 desktop applications. Featuring Change Data Capture (CDC) via SQLite triggers, a first-class Rust Builder API, zero IPC credential exposure, WAL mode multi-thread concurrency, and a zero-config guest-JS SDK.',
+    overview: 'Engineered to eliminate latency and cloud dependency for desktop applications. tauri-plugin-sync captures real-time database modifications via SQLite triggers and pushes batched, cryptographically secured deltas over HTTP with foreign key deferral and automatic exponential backoff.',
+    command: 'cargo add tauri-plugin-sync',
+    externalUrl: 'https://github.com/karan5028ji/tauri-plugin-sync',
+    ctaText: 'View on GitHub',
+    tags: ['Rust', 'Tauri v2', 'SQLite', 'Local-First', 'CDC', 'TypeScript'],
+    icon: '🔄',
+    accent: '#06b6d4',
+    featured: true,
+    highlights: [
+      'First-class Rust Builder pattern with fallback to tauri.conf.json static configuration.',
+      'Strict IPC security: Bearer tokens and DB paths kept strictly in Rust memory, preventing XSS credential theft.',
+      'Granular Tauri v2 permissions system (permissions/default.toml) and scoped capability files.',
+      'Zero-config TypeScript frontend SDK (SyncManager.init()) with full reactive status callbacks.',
+      'Change Data Capture (CDC) triggers with Write-Ahead Logging (WAL) concurrency.'
+    ],
+    specs: {
+      language: 'Rust 2021 & TypeScript',
+      framework: 'Tauri v2 Plugin Ecosystem',
+      database: 'SQLite (WAL Mode & CDC Triggers)',
+      architecture: 'Local-First Asynchronous Actor Loop',
+      license: 'MIT / Apache-2.0',
+      author: 'Karan Gupta (karan5028ji)'
+    },
+    timeline: [
+      {
+        version: 'v0.1.0',
+        date: 'October 2026',
+        milestone: 'Initial release with trigger-based CDC, WAL concurrency, and bi-directional delta synchronization.'
+      },
+      {
+        version: 'Architecture Refactor',
+        date: 'October 2026',
+        milestone: 'Implemented official Tauri Builder API, strict IPC hardening, and granular permission sets following maintainer review.'
+      }
+    ]
+  },
+  {
     id: 'swarmforge',
     title: 'SwarmForge',
     subtitle: 'Autonomous AI Multi-Agent Orchestration Framework',

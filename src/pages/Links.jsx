@@ -171,6 +171,36 @@ const linkGroups = [
         url: 'https://www.issuewire.com/19-year-old-new-delhi-prodigy-kxrn-gupta-bridges-the-gap-between-indie-music-and-software-development-1875549335316491',
         icon: '📰',
       },
+      {
+        title: 'TechYorker Editorial Feature',
+        desc: 'What to Know About the Music Producer Building Local AI',
+        url: 'https://techyorker.com/karan-gupta-what-to-know-about-the-music-producer-building-local-ai/',
+        icon: '🌐',
+      },
+      {
+        title: 'iTechGuides Tech Analysis',
+        desc: 'Kxrn’s Local AI Work: Music, Software & Zero-Cost',
+        url: 'https://www.itechguides.com/kxrn-local-ai-work/',
+        icon: '⚡',
+      },
+      {
+        title: 'GeekChamp Featured Story',
+        desc: 'Local AI on Limited Resources: Connecting Code & Sound',
+        url: 'https://www.geekchamp.com/local-ai-on-limited-resources-how-music-producer-kxrn-connects-code-and-sound/',
+        icon: '💻',
+      },
+      {
+        title: 'MobilesTalk Tech Profile',
+        desc: 'Building Local AI on a Budget Retrospective',
+        url: 'https://mobilestalk.net/tech/kxrn-profile-building-local-ai/',
+        icon: '📱',
+      },
+      {
+        title: 'Tauri Plugins Global Leaderboard',
+        desc: 'Rank #6 Worldwide / #4 Human Worldwide Contributor',
+        url: 'https://github.com/tauri-apps/plugins-workspace/graphs/contributors',
+        icon: '🦀',
+      },
     ],
   },
 ];

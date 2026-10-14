@@ -45,6 +45,13 @@ const pages = [
     image: 'https://kxrn.is-a.dev/kxrn-karan-gupta-music-producer.jpeg'
   },
   {
+    route: 'projects/tauri-plugin-sync',
+    title: 'tauri-plugin-sync | Enterprise SQLite Sync Engine for Tauri v2 | Kxrn',
+    description: 'A high-performance, local-first SQLite synchronization engine for Tauri v2 desktop apps with Change Data Capture (CDC) and Rust Builder API.',
+    canonical: 'https://kxrn.is-a.dev/projects/tauri-plugin-sync',
+    image: 'https://kxrn.is-a.dev/kxrn-karan-gupta-music-producer.jpeg'
+  },
+  {
     route: 'projects/swarmforge',
     title: 'SwarmForge | Autonomous AI Multi-Agent Framework | Kxrn',
     description: 'Enterprise-grade multi-agent orchestration framework for autonomous task decomposition and local LLM execution. CoderLegion Staff Pick.',
