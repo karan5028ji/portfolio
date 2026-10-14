@@ -44,47 +44,45 @@ export const projectsData = [
     ]
   },
   {
-    id: 'tauri-plugin-sync',
-    title: 'tauri-plugin-sync',
-    subtitle: 'Enterprise Local-First SQLite Sync Engine for Tauri v2',
-    category: 'System & Utility',
-    role: 'Author & Core Architect (Karan Gupta)',
-    statusBadge: 'Official Tauri v2 Plugin Standard',
-    description: 'A high-performance, local-first SQLite synchronization engine for Tauri v2 desktop apps with Change Data Capture (CDC) and Rust Builder API.',
-    longDescription: 'tauri-plugin-sync is an enterprise-grade, local-first SQLite synchronization engine built specifically for Tauri v2 desktop applications. Featuring Change Data Capture (CDC) via SQLite triggers, a first-class Rust Builder API, zero IPC credential exposure, WAL mode multi-thread concurrency, and a zero-config guest-JS SDK.',
-    overview: 'Engineered to eliminate latency and cloud dependency for desktop applications. tauri-plugin-sync captures real-time database modifications via SQLite triggers and pushes batched, cryptographically secured deltas over HTTP with foreign key deferral and automatic exponential backoff.',
-    command: 'cargo add tauri-plugin-sync',
-    externalUrl: 'https://github.com/karan5028ji/tauri-plugin-sync',
-    ctaText: 'View on GitHub',
-    tags: ['Rust', 'Tauri v2', 'SQLite', 'Local-First', 'CDC', 'TypeScript'],
-    icon: '🔄',
-    accent: '#06b6d4',
+    id: 'duskymoon-productions',
+    title: 'DuskyMoon Productions',
+    subtitle: 'Digital Solutions Hub · CEO & Founder',
+    category: 'Enterprise & Media',
+    role: 'CEO & Founder (Kxrn / Chitresh Gupta)',
+    statusBadge: 'Active Creative Hub & Label',
+    description: 'Established a creative digital solutions hub managing end-to-end project lifecycles, cinematic web aesthetics, and color grading.',
+    longDescription: 'Established a creative digital solutions hub. Managed end-to-end project lifecycles, focusing on cinematic web aesthetics, modern color grading, premium UI design, and delivering top-tier digital assets to clients.',
+    overview: 'DuskyMoon Productions is an independent creative studio and digital hub founded by Kxrn (Chitresh Gupta / Karan Gupta) based in New Delhi, India. It operates at the convergence of sound engineering, music catalogue distribution, and cinematic digital web development, serving as the official parent vehicle for Kxrn\'s creative releases and digital services.',
+    externalUrl: 'https://duskymoon.vercel.app',
+    ctaText: 'Visit DuskyMoon Hub',
+    tags: ['CEO & Founder', 'Web Architecture', 'Sound Engineering', 'Music Label', 'Digital Hub'],
+    icon: '🌙',
+    accent: '#3b82f6',
     featured: true,
     highlights: [
-      'First-class Rust Builder pattern with fallback to tauri.conf.json static configuration.',
-      'Strict IPC security: Bearer tokens and DB paths kept strictly in Rust memory, preventing XSS credential theft.',
-      'Granular Tauri v2 permissions system (permissions/default.toml) and scoped capability files.',
-      'Zero-config TypeScript frontend SDK (SyncManager.init()) with full reactive status callbacks.',
-      'Change Data Capture (CDC) triggers with Write-Ahead Logging (WAL) concurrency.'
+      'Official independent production house managing the music release catalog for artist alias Kxrn across Spotify, Apple Music, and Shazam.',
+      'Engineers modern dark-aesthetic digital web experiences with high-end typography and interactive physics.',
+      'Documented as an entity in Wikidata (Q141046426) and Crunchbase business directory.',
+      'Full in-house audio mastering, spectral balance, and DSP mixing pipeline.'
     ],
     specs: {
-      language: 'Rust 2021 & TypeScript',
-      framework: 'Tauri v2 Plugin Ecosystem',
-      database: 'SQLite (WAL Mode & CDC Triggers)',
-      architecture: 'Local-First Asynchronous Actor Loop',
-      license: 'MIT / Apache-2.0',
-      author: 'Karan Gupta (karan5028ji)'
+      organization: 'DuskyMoon Productions',
+      founder: 'Kxrn (Karan Gupta / Chitresh Gupta)',
+      childEnterprise: 'Noir Studio (noirwear.in)',
+      location: 'New Delhi, India',
+      status: 'Active Independent Enterprise',
+      website: 'duskymoon.vercel.app'
     },
     timeline: [
       {
-        version: 'v0.1.0',
-        date: 'October 2026',
-        milestone: 'Initial release with trigger-based CDC, WAL concurrency, and bi-directional delta synchronization.'
+        version: 'Founding',
+        date: '2024',
+        milestone: 'Establishment of DuskyMoon Productions as an independent music and media brand.'
       },
       {
-        version: 'Architecture Refactor',
-        date: 'October 2026',
-        milestone: 'Implemented official Tauri Builder API, strict IPC hardening, and granular permission sets following maintainer review.'
+        version: 'Expansion',
+        date: '2026',
+        milestone: 'Integration of digital solutions, web architecture, and full DSP discography distribution.'
       }
     ]
   },
@@ -131,45 +129,47 @@ export const projectsData = [
     ]
   },
   {
-    id: 'duskymoon-productions',
-    title: 'DuskyMoon Productions',
-    subtitle: 'Digital Solutions Hub · CEO & Founder',
-    category: 'Enterprise & Media',
-    role: 'CEO & Founder (Kxrn / Chitresh Gupta)',
-    statusBadge: 'Active Creative Hub & Label',
-    description: 'Established a creative digital solutions hub managing end-to-end project lifecycles, cinematic web aesthetics, and color grading.',
-    longDescription: 'Established a creative digital solutions hub. Managed end-to-end project lifecycles, focusing on cinematic web aesthetics, modern color grading, premium UI design, and delivering top-tier digital assets to clients.',
-    overview: 'DuskyMoon Productions is an independent creative studio and digital hub founded by Kxrn (Chitresh Gupta / Karan Gupta) based in New Delhi, India. It operates at the convergence of sound engineering, music catalogue distribution, and cinematic digital web development, serving as the official parent vehicle for Kxrn\'s creative releases and digital services.',
-    externalUrl: 'https://duskymoon.vercel.app',
-    ctaText: 'Visit DuskyMoon Hub',
-    tags: ['CEO & Founder', 'Web Architecture', 'Sound Engineering', 'Music Label', 'Digital Hub'],
-    icon: '🌙',
-    accent: '#3b82f6',
+    id: 'tauri-plugin-sync',
+    title: 'tauri-plugin-sync',
+    subtitle: 'Enterprise Local-First SQLite Sync Engine for Tauri v2',
+    category: 'System & Utility',
+    role: 'Author & Core Architect (Karan Gupta)',
+    statusBadge: 'Official Tauri v2 Plugin Standard',
+    description: 'A high-performance, local-first SQLite synchronization engine for Tauri v2 desktop apps with Change Data Capture (CDC) and Rust Builder API.',
+    longDescription: 'tauri-plugin-sync is an enterprise-grade, local-first SQLite synchronization engine built specifically for Tauri v2 desktop applications. Featuring Change Data Capture (CDC) via SQLite triggers, a first-class Rust Builder API, zero IPC credential exposure, WAL mode multi-thread concurrency, and a zero-config guest-JS SDK.',
+    overview: 'Engineered to eliminate latency and cloud dependency for desktop applications. tauri-plugin-sync captures real-time database modifications via SQLite triggers and pushes batched, cryptographically secured deltas over HTTP with foreign key deferral and automatic exponential backoff.',
+    command: 'cargo add tauri-plugin-sync',
+    externalUrl: 'https://github.com/karan5028ji/tauri-plugin-sync',
+    ctaText: 'View on GitHub',
+    tags: ['Rust', 'Tauri v2', 'SQLite', 'Local-First', 'CDC', 'TypeScript'],
+    icon: '🔄',
+    accent: '#06b6d4',
     featured: true,
     highlights: [
-      'Official independent production house managing the music release catalog for artist alias Kxrn across Spotify, Apple Music, and Shazam.',
-      'Engineers modern dark-aesthetic digital web experiences with high-end typography and interactive physics.',
-      'Documented as an entity in Wikidata (Q141046426) and Crunchbase business directory.',
-      'Full in-house audio mastering, spectral balance, and DSP mixing pipeline.'
+      'First-class Rust Builder pattern with fallback to tauri.conf.json static configuration.',
+      'Strict IPC security: Bearer tokens and DB paths kept strictly in Rust memory, preventing XSS credential theft.',
+      'Granular Tauri v2 permissions system (permissions/default.toml) and scoped capability files.',
+      'Zero-config TypeScript frontend SDK (SyncManager.init()) with full reactive status callbacks.',
+      'Change Data Capture (CDC) triggers with Write-Ahead Logging (WAL) concurrency.'
     ],
     specs: {
-      organization: 'DuskyMoon Productions',
-      founder: 'Kxrn (Karan Gupta / Chitresh Gupta)',
-      childEnterprise: 'Noir Studio (noirwear.in)',
-      location: 'New Delhi, India',
-      status: 'Active Independent Enterprise',
-      website: 'duskymoon.vercel.app'
+      language: 'Rust 2021 & TypeScript',
+      framework: 'Tauri v2 Plugin Ecosystem',
+      database: 'SQLite (WAL Mode & CDC Triggers)',
+      architecture: 'Local-First Asynchronous Actor Loop',
+      license: 'MIT / Apache-2.0',
+      author: 'Karan Gupta (karan5028ji)'
     },
     timeline: [
       {
-        version: 'Founding',
-        date: '2024',
-        milestone: 'Establishment of DuskyMoon Productions as an independent music and media brand.'
+        version: 'v0.1.0',
+        date: 'October 2026',
+        milestone: 'Initial release with trigger-based CDC, WAL concurrency, and bi-directional delta synchronization.'
       },
       {
-        version: 'Expansion',
-        date: '2026',
-        milestone: 'Integration of digital solutions, web architecture, and full DSP discography distribution.'
+        version: 'Architecture Refactor',
+        date: 'October 2026',
+        milestone: 'Implemented official Tauri Builder API, strict IPC hardening, and granular permission sets following maintainer review.'
       }
     ]
   },
