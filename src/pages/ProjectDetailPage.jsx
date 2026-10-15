@@ -62,9 +62,13 @@ const ProjectDetailPage = ({ projectId }) => {
       <main className="project-detail-main">
         {/* Navigation & Breadcrumb */}
         <div className="project-detail-nav">
-          <button
+          <a
+            href="/projects"
             className="back-btn"
-            onClick={() => navigate('/projects')}
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('/projects');
+            }}
             aria-label="Back to projects catalogue"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -72,7 +76,7 @@ const ProjectDetailPage = ({ projectId }) => {
               <polyline points="12 19 5 12 12 5" />
             </svg>
             <span>All Projects</span>
-          </button>
+          </a>
 
           <nav className="breadcrumbs" aria-label="Breadcrumbs">
             <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Home</a>
@@ -273,6 +277,80 @@ const ProjectDetailPage = ({ projectId }) => {
             )}
           </motion.aside>
         </div>
+
+        {/* Interlinked Related Architectures & Systems Section */}
+        <motion.section
+          className="related-projects-section glass-card"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          aria-label="Related Projects & Architectures"
+        >
+          <div className="related-section-header">
+            <div>
+              <span className="related-section-label">INTERLINKED ECOSYSTEM</span>
+              <h2 className="related-section-title">Explore Related Architectures &amp; Works</h2>
+            </div>
+            <a
+              href="/projects"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/projects');
+              }}
+              className="related-view-all-link"
+            >
+              <span>Full Technical Catalogue ({projectsData.length})</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+
+          <div className="related-projects-grid">
+            {projectsData
+              .filter((p) => p.id !== project.id)
+              .slice(0, 3)
+              .map((rel) => (
+                <a
+                  key={rel.id}
+                  href={`/projects/${rel.id}`}
+                  className="related-project-card"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate(`/projects/${rel.id}`);
+                  }}
+                  style={{ '--related-accent': rel.accent }}
+                >
+                  <div className="related-card-top">
+                    <span className="related-icon">{rel.icon}</span>
+                    <span className="related-category">{rel.category}</span>
+                  </div>
+                  <h3 className="related-title">{rel.title}</h3>
+                  <p className="related-subtitle">{rel.subtitle}</p>
+                  <div className="related-card-footer">
+                    <span>Inspect Specs</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+          </div>
+
+          <div className="related-hub-links">
+            <span>Navigation Hub:</span>
+            <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Portfolio Home</a>
+            <span className="hub-sep">•</span>
+            <a href="/projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }}>All Projects</a>
+            <span className="hub-sep">•</span>
+            <a href="/music" onClick={(e) => { e.preventDefault(); navigate('/music'); }}>Music Discography</a>
+            <span className="hub-sep">•</span>
+            <a href="/links" onClick={(e) => { e.preventDefault(); navigate('/links'); }}>Official Links</a>
+          </div>
+        </motion.section>
       </main>
     </div>
   );

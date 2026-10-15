@@ -268,6 +268,26 @@ const Projects = () => {
                 </svg>
               </a>
             </div>
+
+            {/* Quick-Index Directory: Always rendered for search bots and immediate navigation */}
+            <div className="projects-quick-directory">
+              <span className="quick-dir-label">Crawlable Project Index:</span>
+              <div className="quick-dir-tags">
+                {projectsData.map((p) => (
+                  <a
+                    key={p.id}
+                    href={`/projects/${p.id}`}
+                    className="quick-dir-tag"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(`/projects/${p.id}`);
+                    }}
+                  >
+                    <span>{p.title}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </motion.div>
         )}
       </div>

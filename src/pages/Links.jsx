@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { navigate } from '../utils/navigate';
 import './Links.css';
 
 const linkGroups = [
@@ -33,11 +34,58 @@ const linkGroups = [
     ],
   },
   {
-    groupTitle: 'ENTERPRISE',
+    groupTitle: 'FEATURED ARCHITECTURES & SYSTEMS',
     items: [
       {
+        title: 'tauri-plugin-sync',
+        desc: 'Enterprise Local-First SQLite Sync Engine for Tauri v2',
+        url: '/projects/tauri-plugin-sync',
+        icon: '🔄',
+        internal: true,
+      },
+      {
+        title: 'Win-Optimizer-Pro',
+        desc: 'Published in Microsoft winget Registry (C++ Win32)',
+        url: '/projects/win-optimizer-pro',
+        icon: '⚡',
+        internal: true,
+      },
+      {
+        title: 'SwarmForge',
+        desc: 'Autonomous Multi-Agent AI Framework · CoderLegion Pick',
+        url: '/projects/swarmforge',
+        icon: '🐝',
+        internal: true,
+      },
+      {
         title: 'DuskyMoon Productions',
-        desc: 'Independent Music Label & Hub',
+        desc: 'Creative Solutions Hub & Independent Music Label',
+        url: '/projects/duskymoon-productions',
+        icon: '🌙',
+        internal: true,
+      },
+      {
+        title: 'Noir Studio (NoirWear)',
+        desc: 'Luxury Clothing Atelier & Child Enterprise',
+        url: '/projects/noir-studio',
+        icon: '🧥',
+        internal: true,
+      },
+      {
+        title: 'Sapne ft. Ankit',
+        desc: 'Official Single Release & DSP Engineering Master',
+        url: '/projects/sapne',
+        icon: '🎵',
+        internal: true,
+      },
+    ],
+  },
+  {
+    groupTitle: 'ENTERPRISE & HUBS',
+    items: [
+      {
+        title: 'DuskyMoon Productions Hub',
+        desc: 'Official Creative Studio Portal',
         url: 'https://duskymoon.vercel.app',
         icon: '🌙',
       },
@@ -55,7 +103,7 @@ const linkGroups = [
       },
       {
         title: 'GitHub Repositories',
-        desc: '@karan5028ji · SwarmForge & AI',
+        desc: '@karan5028ji · SwarmForge & Open Source',
         url: 'https://github.com/karan5028ji',
         icon: '💻',
       },
@@ -281,10 +329,20 @@ const Links = () => {
             Founder of <strong>DuskyMoon Productions</strong> · Delhi, India
           </p>
 
-          <a href="/" className="portfolio-pill">
-            <span>🌐 Main Portfolio Website</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
+          <div className="links-nav-row" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '16px' }}>
+            <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="portfolio-pill">
+              <span>Portfolio Home</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="/projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className="portfolio-pill">
+              <span>All Projects</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="/music" onClick={(e) => { e.preventDefault(); navigate('/music'); }} className="portfolio-pill">
+              <span>Music Discography</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
         </motion.header>
 
         {/* Links Stack Grouped (Apple iOS Settings Inset Box Style) */}
@@ -304,8 +362,14 @@ const Links = () => {
                   <React.Fragment key={item.title}>
                     <motion.a
                       href={item.url}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      target={item.internal ? undefined : '_blank'}
+                      rel={item.internal ? undefined : 'me noopener noreferrer'}
+                      onClick={(e) => {
+                        if (item.internal) {
+                          e.preventDefault();
+                          navigate(item.url);
+                        }
+                      }}
                       className="apple-link-row"
                       variants={itemVariants}
                       whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.08)' }}

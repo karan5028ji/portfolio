@@ -184,6 +184,34 @@ const MusicPage = () => {
                           </a>
                         ))}
                       </div>
+
+                      {/* Technical Specs & Entity Interlinks */}
+                      <div className="release-internal-links" style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid rgba(255, 255, 255, 0.08)', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                        <a
+                          href="/projects/sapne"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/projects/sapne');
+                          }}
+                          className="btn btn-secondary"
+                          style={{ fontSize: '0.82rem', padding: '8px 16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                        >
+                          <span>Sapne Production Specs &amp; Master</span>
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a
+                          href="/projects/duskymoon-productions"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/projects/duskymoon-productions');
+                          }}
+                          className="btn btn-secondary"
+                          style={{ fontSize: '0.82rem', padding: '8px 16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                        >
+                          <span>DuskyMoon Productions Studio</span>
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -205,9 +233,17 @@ const MusicPage = () => {
           <p className="upcoming-desc">
             Currently in pre-production on multiple instrumentals, Indian lo-fi chillhop beats, and cinematic background scores under DuskyMoon Productions. Collaborations with independent vocalists and instrumentalists are ongoing.
           </p>
-          <a href="/#contact" onClick={(e) => { e.preventDefault(); navigate('/#contact'); }} className="btn btn-secondary">
-            Inquire for Studio Collaboration
-          </a>
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <a href="/#contact" onClick={(e) => { e.preventDefault(); navigate('/#contact'); }} className="btn btn-secondary">
+              Inquire for Studio Collaboration
+            </a>
+            <a href="/projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className="btn btn-secondary">
+              All Engineered Projects
+            </a>
+            <a href="/links" onClick={(e) => { e.preventDefault(); navigate('/links'); }} className="btn btn-secondary">
+              Links &amp; Official Identifiers
+            </a>
+          </div>
         </motion.section>
       </main>
     </div>

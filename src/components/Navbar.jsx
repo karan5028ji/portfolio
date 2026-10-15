@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '/projects' },
   { name: 'Music', href: '/music' },
+  { name: 'Links', href: '/links' },
   { name: 'Press', href: '#press' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -46,6 +47,9 @@ const Navbar = () => {
     } else if (link.name === 'Music') {
       e.preventDefault();
       navigate('/music');
+    } else if (link.name === 'Links') {
+      e.preventDefault();
+      navigate('/links');
     } else if (window.location.pathname !== '/') {
       e.preventDefault();
       navigate('/' + link.href);
